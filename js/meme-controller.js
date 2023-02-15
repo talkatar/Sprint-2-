@@ -5,7 +5,7 @@ let gElCanvas
 let gCtx
 let gBgc = 'white'
 let gIsSwitched
-
+const gMEMEID='gMeme.selectedLineIdx'
 function onInit() {
 
      gElCanvas = document.querySelector('canvas')
@@ -52,13 +52,15 @@ function drawImg(idImg) {
 
           let memes = getMeme()
           let textLines=memes.lines
-          console.log(textLines);
-          console.log( );
           textLines.forEach(line=>{drawText(line.txt,line.size,line.align, line.color,
                line.x, line.y)
                console.log(line.txt,line.size,line.align, line.color,
                     line.x, line.y);
           })
+          let meme = getMeme()
+          drawRect(meme.lines[gMeme.selectedLineIdx].x,meme.lines[gMeme.selectedLineIdx].y,
+               meme.lines[gMeme.selectedLineIdx].x,meme.lines[gMeme.selectedLineIdx].size
+               )
      }
 }
      
@@ -127,100 +129,20 @@ function onAddLine() {
 
 
      function onSwitchLine() {
-
           switchLine()
           let meme = getMeme()
-          
-          drawRect(meme.lines[gMeme.selectedLineIdx].x,meme.lines[gMeme.selectedLineIdx].y,
-               meme.lines[gMeme.selectedLineIdx].x,meme.lines[gMeme.selectedLineIdx].size
-               )
            document.querySelector('.meme-line').value=meme.lines[meme.selectedLineIdx].txt
+           renderMeme()
 
      }
 
 
-
-
-
-
-
-     function drawRect(x,y,xEnd,yEnd){
-          gCtx.strokeStyle = 'black';
+     function drawRect(x,y){
+          let meme = getMeme()
+          gCtx.strokeStyle = 'white';
           gCtx.lineWidth = 1;
-          // gCtx.globalAlpha = frameOpacity;
-          gCtx.strokeRect(x, y,x+10,y-1);
+          console.log(x);
+          console.log(y);
+        gCtx.strokeRect(10,y-meme.lines[gMeme.selectedLineIdx].size-5,gElCanvas.width-20
+          ,meme.lines[gMeme.selectedLineIdx].size+10);
       }
-     
-     // function renderShownLines() {
-     //      let lines=shownLines()
-     //      console.log(lines);
-     //      lines.map(line=>{drawText(line.txt, line.size,
-     //           line.align,
-     //          line.color, line.x, line.y)
-     
-     // }
-     
-     
-     //      )
-     
-     // }
-
-
-
-
-
-
-
-
-// let memes = getMeme()
-     // drawText(memes.lines[0].txt, memes.lines[0].size, memes.lines[0].align,
-     //      memes.lines[0].color, gElCanvas.width * 0.5, gElCanvas.height * 0.5)
-     //     if(gIsSwitched)  { 
-     //      renderShownLines() 
-
-
-
-
-
-    // console.log(gMeme.selectedLineIdx);
-          // drawText(memes.lines[gMeme.selectedLineIdx].txt, memes.lines[gMeme.selectedLineIdx].size, memes.lines[gMeme.selectedLineIdx].align,
-          //      memes.lines[gMeme.selectedLineIdx].color,memes.lines[gMeme.selectedLineIdx].x, memes.lines[gMeme.selectedLineIdx].y)
-          //      console.log(memes.lines[gMeme.selectedLineIdx].x,memes.lines[gMeme.selectedLineIdx].y);
-     //          if(gIsSwitched)  { 
-     //           renderShownLines() 
-     // }
-
-
-
-     // drawText(meme.lines[meme.selectedLineIdx].txt, meme.lines[meme.selectedLineIdx].size,
-     //      meme.lines[meme.selectedLineIdx].align,
-     //     meme.lines[meme.selectedLineIdx].color, gElCanvas.width * 0.25, gElCanvas.height * 0.25
-     //     ,meme.lines[meme.selectedLineIdx].x, meme.lines[meme.selectedLineIdx].y)
-
-     // }\
-
-
-// function onAddLine() {
-//      addLine()
-
-
-     
-//      drawText(memes.lines[1].txt, memes.lines[0].size, memes.lines[0].align,
-//       memes.lines[0].color, 40, 40)
-
-
-// }
-// onAddLine()
-
-
-
-// canvas.addEventListener('keydown', function(event) {
-//      if (event.keyCode == 37) { // Left arrow
-//        currentTextObject--;
-//      } else if (event.keyCode == 39) { // Right arrow
-//        currentTextObject++;
-//      }
-   
-//      // Redraw canvas with updated current text object
-//      drawCanvas();
-//    });

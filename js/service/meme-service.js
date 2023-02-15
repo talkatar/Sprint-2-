@@ -87,7 +87,6 @@ function addLine() {
 
 
 function switchLine() {
-    // _saveMemsToStorage(memeSwitchedK,gMeme.selectedLineIdx)
     console.log(gMeme.selectedLineIdx);
     if (gMeme.selectedLineIdx === gMeme.lines.length - 1) gMeme.selectedLineIdx=0
     else gMeme.selectedLineIdx++
@@ -95,6 +94,13 @@ function switchLine() {
 
 
 }
+
+
+
+
+
+
+
 
 
 // function shownLines() {
