@@ -33,11 +33,11 @@ gMeme = {
     selectedLineIdx: 0,
     lines: [
         {
-            txt: 'I sometimes eat Falafel', size: 20, align: 'center', color: 'white', x: 250, y: 250,
+            txt: 'I sometimes eat Falafel', size: 20, align: 'center', color: 'white', x: 250, y: 250, font:'Mock',
         }
         ,
         {
-            txt: 'I Love summer', size: 20, align: 'center', color: 'white', x: 150, y: 150,
+            txt: 'I Love summer', size: 20, align: 'center', color: 'white', x: 150, y: 150, font:'Mock',
         }
     ]
 }
@@ -62,7 +62,7 @@ function setLineTxt(memeLine) {
 }
 
 
-function changeColor(color) {
+function setColor(color) {
     gMeme.lines[gMeme.selectedLineIdx].color = color
 }
 
@@ -80,15 +80,54 @@ function addLine() {
 
     (gMeme.lines).push(
         {
-            txt: 'I Love world', size: 20, align: 'center', color: 'white', shown: 'false', x: 75, y: 75,
+            txt: 'I Love world', size: 20, align: 'center', color: 'white', shown: 'false', x: 75, y: 75, font:'Mock'
         }
     )
+}
+
+function deleteLine() {
+    (gMeme.lines).splice
+
+    }
+
+
+
+
+function setFont(font) {
+    gMeme.lines[gMeme.selectedLineIdx].font=font
+
+
+}
+
+function alignCenter() {
+    gMeme.lines[gMeme.selectedLineIdx].x = getCanvasSize().width*0.5
+}
+
+function alignLeft() {
+  console.log(gMeme.lines[gMeme.selectedLineIdx].txt.length);
+    gMeme.lines[gMeme.selectedLineIdx].x = gMeme.lines[gMeme.selectedLineIdx].txt.length
+}
+
+function alignRight() {
+    gMeme.lines[gMeme.selectedLineIdx].x = getCanvasSize().width-gMeme.lines[gMeme.selectedLineIdx].txt.length
+}
+
+function textUP() {
+    if(!gMeme.lines[gMeme.selectedLineIdx].y) return
+    gMeme.lines[gMeme.selectedLineIdx].y-=10
+    // gMeme.lines[gMeme.selectedLineIdx].txt.size
+}
+
+function textDown() {
+    if(gMeme.lines[gMeme.selectedLineIdx].y ===getCanvasSize().height) return
+    gMeme.lines[gMeme.selectedLineIdx].y+=10 
+    // getCanvasSize().height-gMeme.lines[gMeme.selectedLineIdx].txt.size) 
 }
 
 
 function switchLine() {
     console.log(gMeme.selectedLineIdx);
-    if (gMeme.selectedLineIdx === gMeme.lines.length - 1) gMeme.selectedLineIdx=0
+    if (gMeme.selectedLineIdx === gMeme.lines.length - 1) gMeme.selectedLineIdx = 0
     else gMeme.selectedLineIdx++
     console.log(gMeme.selectedLineIdx);
 
@@ -102,7 +141,11 @@ function switchLine() {
 
 
 
+// function setFontSize(size){
+//     gMeme.lines[gMeme.selectedLineIdx].size=size
 
+
+// }
 // function shownLines() {
 //     console.log(gMeme.selectedLineIdx);
 //     console.log(gMeme);

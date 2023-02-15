@@ -4,8 +4,8 @@
 let gElCanvas
 let gCtx
 let gBgc = 'white'
-let gIsSwitched
-const gMEMEID='gMeme.selectedLineIdx'
+
+
 function onInit() {
 
      gElCanvas = document.querySelector('canvas')
@@ -53,9 +53,8 @@ function drawImg(idImg) {
           let memes = getMeme()
           let textLines=memes.lines
           textLines.forEach(line=>{drawText(line.txt,line.size,line.align, line.color,
-               line.x, line.y)
-               console.log(line.txt,line.size,line.align, line.color,
-                    line.x, line.y);
+               line.x, line.y,line.font)
+               
           })
           let meme = getMeme()
           drawRect(meme.lines[gMeme.selectedLineIdx].x,meme.lines[gMeme.selectedLineIdx].y,
@@ -66,14 +65,13 @@ function drawImg(idImg) {
      
      
 
-     function drawText(text, size, align, color, x, y) {
-
+     function drawText(text, size, align, color, x, y, font) {
           gCtx.lineWidth = 1
           gCtx.strokeStyle = 'black'
           gCtx.fillStyle = `${color}`
-          gCtx.font = `${size}px Arial`
+          gCtx.font = `${size}px ${font}`
           gCtx.textAlign = `${align}`
-          // gCtx.textBaseline = `${align}`
+          gCtx.textBaseline = `${align}`
           gCtx.fillText(text, x, y)
           gCtx.strokeText(text, x, y)
      }
@@ -87,8 +85,8 @@ function OnSetLineTxt(memeLine) {
 
 }
 
-function onChangeColor(color) {
-     changeColor(color)
+function onSetColor(color) {
+     setColor(color)
      renderMeme()
 
 }
@@ -111,21 +109,43 @@ function onAddLine() {
      
 }
 
+function onSetFont(font) {
+     setFont(font)
+     renderMeme()
+     
+}
 
+function onAlignCenter() {
+     alignCenter()
+     renderMeme()
+     
+}
 
+function onAlignLeft() {
+     alignLeft()
+     renderMeme()
+     
+}
 
+function onAlignRight() {
+     alignRight()
+     renderMeme()
+     
+}
 
+function onTextUP() {
+     textUP()
+     renderMeme() 
+}
 
+function onTextDown() {
+     textDown()
+     renderMeme()
+}
 
-
- // drawText(meme.lines[meme.selectedLineIdx].txt, meme.lines[meme.selectedLineIdx].size,
-     //       meme.lines[meme.selectedLineIdx].align,
-     //      meme.lines[meme.selectedLineIdx].color,gElCanvas.width * 0.25, gElCanvas.height * 0.25)
-
-
-
-     //  onAddLine()
-
+function getCanvasSize(){
+     return gElCanvas
+}
 
 
      function onSwitchLine() {
@@ -141,8 +161,52 @@ function onAddLine() {
           let meme = getMeme()
           gCtx.strokeStyle = 'white';
           gCtx.lineWidth = 1;
-          console.log(x);
-          console.log(y);
-        gCtx.strokeRect(10,y-meme.lines[gMeme.selectedLineIdx].size-5,gElCanvas.width-20
-          ,meme.lines[gMeme.selectedLineIdx].size+10);
+          let xStart=10
+          let yStart=y-meme.lines[gMeme.selectedLineIdx].size-5
+          let width=gElCanvas.width-20
+          let height=meme.lines[gMeme.selectedLineIdx].size+10
+     //    gCtx.strokeRect(10,y-meme.lines[gMeme.selectedLineIdx].size-5,gElCanvas.width-20
+     //      ,meme.lines[gMeme.selectedLineIdx].size+10);
+          const radius = 10;
+          gCtx.beginPath();
+          gCtx.moveTo(xStart + radius, yStart);
+          gCtx.lineTo(xStart + width - radius, yStart);
+          gCtx.arcTo(xStart + width, yStart, xStart + width, yStart + radius, radius);
+          gCtx.lineTo(xStart + width, yStart + height - radius);
+          gCtx.arcTo(xStart + width, yStart + height, xStart + width - radius, yStart + height, radius);
+          gCtx.lineTo(xStart + radius, yStart + height);
+          gCtx.arcTo(xStart, yStart + height, xStart, yStart + height - radius, radius);
+          gCtx.lineTo(xStart, yStart + radius);
+          gCtx.arcTo(xStart, yStart, xStart + radius, yStart, radius);
+          gCtx.closePath();
+          gCtx.stroke();
       }
+
+
+
+
+
+
+      
+
+// function onSetFontSize() {
+//      setFontSize()
+//      renderMeme()
+     
+// }
+
+
+
+
+
+
+
+
+ // drawText(meme.lines[meme.selectedLineIdx].txt, meme.lines[meme.selectedLineIdx].size,
+     //       meme.lines[meme.selectedLineIdx].align,
+     //      meme.lines[meme.selectedLineIdx].color,gElCanvas.width * 0.25, gElCanvas.height * 0.25)
+
+
+
+     //  onAddLine()
+

@@ -25,12 +25,26 @@
 
 		<input class="meme-line" placeholder="Enter A Meme Line" oninput="OnSetLineTxt(this.value)">
 		<label for="color">Enter a color</label>
-		<input type="color"  name="color" oninput="onChangeColor(this.value)" />
+		<input type="color"  name="color" oninput="onSetColor(this.value)" />
+		<label for="font">Enter a font</label>
+        
+		<select onchange="onSetFont(this.value)">
+            <option value="Impact">Impact</option>
+            <option value="Arial">Arial</option>
+            <option value="David">David</option>
+        </select>
+
+		<button onclick="onTextUP()" >UP</button>
+		<button onclick="onTextDown()" >Down</button>
+		<button onclick="onAlignCenter()" >Center</button>
+		<button onclick="onAlignLeft()" >Left</button>
+		<button onclick="onAlignRight()" >Right</button>
 		<button onclick="onIncreaseFont()" >Increase</button>
 		<button onclick="onDecreaseFont()" >Decrease</button>
 		<button onclick="onAddLine()" >Add Line</button>
-		<button onclick="onSwitchLine()" >Switch Line</button>
+		<button onclick="onDeleteLine()" >Delete</button>
 
+		<button onclick="onSwitchLine()" >Switch Line</button>
 		
 		<section class="canvas-container">
 			<canvas id="my-canvas" height="500" width="500"> </canvas>
