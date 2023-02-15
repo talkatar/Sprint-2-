@@ -3,6 +3,7 @@ const SWITCHED_KEY = 'memeSwitchedK'
 let gMeme
 // var gselectedImgId
 // console.log(gselectedImgId);
+
 let gKeywordSearchCountMap = { 'funny': 12, 'cat': 16, 'baby': 2 }
 
 let gImgs = [{ id: 1, url: 'img/1.jpg', keywords: ['funny', 'cat'] },
@@ -32,11 +33,11 @@ gMeme = {
     selectedLineIdx: 0,
     lines: [
         {
-            txt: 'I sometimes eat Falafel', size: 20, align: 'center', color: 'white', shown: 'true', x: null, y: null,
+            txt: 'I sometimes eat Falafel', size: 20, align: 'center', color: 'white', x: 250, y: 250,
         }
         ,
         {
-            txt: 'I Love summer', size: 20, align: 'center', color: 'white', shown: 'false', x: null, y: null,
+            txt: 'I Love summer', size: 20, align: 'center', color: 'white', x: 150, y: 150,
         }
     ]
 }
@@ -54,7 +55,6 @@ function setImg(selectedImgId) {
     gMeme.selectedImgId = selectedImgId
 }
 
-
 function setLineTxt(memeLine) {
     console.log(gMeme.selectedLineIdx);
     gMeme.lines[gMeme.selectedLineIdx].txt = memeLine
@@ -63,25 +63,26 @@ function setLineTxt(memeLine) {
 
 
 function changeColor(color) {
-    gMeme.lines[0].color = color
+    gMeme.lines[gMeme.selectedLineIdx].color = color
 }
 
 function increaseFont() {
-    gMeme.lines[0].size++
+    gMeme.lines[gMeme.selectedLineIdx].size++
 }
 
 function decreaseFont() {
-    if (!gMeme.lines[0].size) return
-    gMeme.lines[0].size--
+    if (!gMeme.lines[gMeme.selectedLineIdx].size) return
+    gMeme.lines[gMeme.selectedLineIdx].size--
 }
 
 
 function addLine() {
-    console.log(gMeme.selectedLineIdx);
-    if (gMeme.selectedLineIdx === (gMeme.lines.length - 1)) gMeme.selectedLineIdx[0]
-    else gMeme.selectedLineIdx++
-    gMeme.lines[gMeme.selectedLineIdx].shown = 'true'
-    console.log(gMeme);
+
+    (gMeme.lines).push(
+        {
+            txt: 'I Love world', size: 20, align: 'center', color: 'white', shown: 'false', x: 75, y: 75,
+        }
+    )
 }
 
 
@@ -92,45 +93,50 @@ function switchLine() {
     else gMeme.selectedLineIdx++
     console.log(gMeme.selectedLineIdx);
 
-}
-
-function updateMemeLoc(x, y) {
-    gMeme.lines[gMeme.selectedLineIdx].x = x
-    gMeme.lines[gMeme.selectedLineIdx].y = y
-}
-
-function shownLines() {
-    console.log('h');
-    let shownlines=(gMeme.lines).filter(line => (line.shown === 'true'))
-    console.log(shownlines);
-    console.log(gMeme.selectedLineIdx);
-    console.log(gMeme.selectedLineIdx);
-
-    shownlines= shownlines.splice(gMeme.lines[gMeme.selectedLineIdx],1)
-    console.log(shownlines);
-    return shownlines
-}
-
-
-
-
-
-
-function _saveMemsToStorage() {
-    saveToStorage(STORAGE_KEY, mems)
-}
-
-
-
-
-
-function clearCanvas() {
-
-    gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height)
 
 }
 
 
-function getSwitchKey() {
-    loadFromStorage(key)
-}
+// function shownLines() {
+//     console.log(gMeme.selectedLineIdx);
+//     console.log(gMeme);
+
+//     let shownlines=(gMeme.lines).filter(line => (line.shown === 'true'))
+//     console.log(shownlines);
+//   shownlines.splice(gMeme.lines[gMeme.selectedLineIdx],1)
+//   console.log(shownlines);
+//     return shownlines
+// }
+
+
+
+// function _saveMemsToStorage() {
+//     saveToStorage(STORAGE_KEY, mems)
+// }
+
+
+
+// function clearCanvas() {
+
+//     gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height)
+
+// }
+
+
+// function getSwitchKey() {
+//     loadFromStorage(key)
+// }
+
+
+
+// function updateMemeLoc(x, y) {
+//     gMeme.lines[gMeme.selectedLineIdx].x = x
+//     gMeme.lines[gMeme.selectedLineIdx].y = y
+// }
+
+// console.log(gMeme.selectedLineIdx);
+//     if (gMeme.selectedLineIdx === (gMeme.lines.length - 1)) gMeme.selectedLineIdx=0
+//     else gMeme.selectedLineIdx++
+//     gMeme.lines[gMeme.selectedLineIdx].shown = 'true'
+//     console.log(gMeme);
+
