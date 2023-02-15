@@ -14,3 +14,4 @@ function loadFromStorage(key) { //gets from Local Storage
 function removeFromStorage(key) { //removes from Local Storage
      localStorage.removeItem(key)
 }
+

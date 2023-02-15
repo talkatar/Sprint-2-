@@ -24,7 +24,14 @@
 	<section class="editor ">
 
 		<input class="meme-line" placeholder="Enter A Meme Line" oninput="OnSetLineTxt(this.value)">
+		<label for="color">Enter a color</label>
+		<input type="color"  name="color" oninput="onChangeColor(this.value)" />
+		<button onclick="onIncreaseFont(1)" >Increase</button>
+		<button onclick="onDecreaseFont(1)" >Decrease</button>
+		<button onclick="onSwitchLine(1)" >Switch Line</button>
 
+
+		
 		<section class="canvas-container">
 			<canvas id="my-canvas" height="500" width="500"> </canvas>
 		</section>
