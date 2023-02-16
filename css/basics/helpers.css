@@ -1,9 +1,23 @@
 /* flex helpers */
 
-.flex {
+ .flex {
 	display: flex;
 }
 
+.grid{
+    display: grid;
+}
+
+.flex.space-between {
+    justify-content: space-between;
+}
+
+.clean-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+/* 
 .flex.column {
 	flex-direction: column;
 }
@@ -27,24 +41,24 @@
 
 .flex.even-columns > * {
 	width: 100%;
-}
+} */
 
 /* grid helpers */
-.grid {
+/* .grid {
 	display: grid;
 }
 .grid.center-all {
 	justify-content: center;
 	align-content: center;
-}
+} */
 
 /* Cleaning settings */
-.clean {
+/* .clean {
 	margin: 0;
 	padding: 0;
-}
+} */
 
 /* list helpers */
-.clean.list {
+/* .clean.list {
 	list-style-type: none;
-}
+} */

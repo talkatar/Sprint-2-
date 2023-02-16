@@ -154,10 +154,11 @@ renderMeme()
  function onDownload(elLink){
            isDownload='true'
            renderMeme()
-           const data = gElCanvas.toDataURL()
-           elLink.href = data 
-           elLink.download = 'my-mime' 
-     
+               const data = gElCanvas.toDataURL()
+               elLink.href = data 
+               elLink.download = 'my-mime' 
+           
+           
 }
 
  function drawRect(x,y){
@@ -184,6 +185,24 @@ renderMeme()
           gCtx.closePath();
           gCtx.stroke();
  }
+
+          function onToggleMeme(){
+
+
+               document.querySelector('.gallery').style.display='none'
+               document.querySelector('.editor').style.display='block'
+
+               // console.log(document.querySelector('.gallery').style.diplay);
+               // if(document.querySelector('.gallery').style.diplay==='block') return
+               // document.querySelector('.gallery').classList.toggle('closed-window')
+
+               // document.querySelector('.editor').classList.toggle('closed-window')
+           
+
+           }
+
+
+
 
  function addListeners() {
      //Listen for resize ev

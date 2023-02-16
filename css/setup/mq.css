@@ -1,8 +1,8 @@
 /* MOBILE ONLY */
 
-@media (max-width: 740px) {
+/* @media (max-width: 740px) { */
 	/* SCREEN for when you want to open a modal */
-	.main-screen {
+	/* .main-screen {
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -20,16 +20,16 @@
 		opacity: 1;
 		user-select: none;
 	}
-}
+} */
 
 /* MEDIUM */
 /* 740px */
 
-@media (min-width: 740px) {
-}
+/* @media (min-width: 740px) {
+} */
 
 /* LARGE */
 /* 1060px */
 
-@media (min-width: 1060px) {
-}
+/* @media (min-width: 1060px) {
+} */

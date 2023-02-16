@@ -10,30 +10,27 @@
 
 <body class="main-layout" onload="onInit()">
 
-	<header class="main-header   ">
-        <div class="main-continer">
+	<header class="main-header flex">
+        <div class="main-continer flex space-between"  >
             <div class="logo">Meme Generator</div>
             <nav class="main-nav  ">
-                <ul class="main-menu">
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Meme Edit</a></li>
+                <ul class="main-menu  flex  clean-list">
+					<li><a href="#" onclick="onToggleGallery()">Gallery</a></li>
+					<li><a href="#" onclick="onToggleMeme()">Meme Edit</a></li>
                 </ul>
             </nav>
-
+	</header>
 
 
 
 
 
 	<section class="gallery">
-
-		<div class="imgs-container"></div>
-
-
+		<div class="imgs-container" flex></div>
 	</section>
 
 
-	<section class="editor ">
+	<section class="editor">
 
 		<input class="meme-line" placeholder="Enter A Meme Line" oninput="OnSetLineTxt(this.value)">
 		<input type="color"  name="color" oninput="onSetColor(this.value)" />
@@ -62,8 +59,8 @@
 
 
 
-	<footer class="main-footer">
-        <section class="footer-content ">
+	<footer class="main-footer grid">
+        <section class="footer-content flex space-between ">
             <div class="logo">Meme Generator</div>
             <small> &copy; Coffee Rights - Tal Katar -  </small>
         </section>

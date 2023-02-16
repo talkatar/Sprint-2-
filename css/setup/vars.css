@@ -1,7 +1,18 @@
 :root {
-	--clr0: #f8f8f8;
-	--clr1: #f8f8f8;
-	--clr-0: #f8f8f8;
-	--clr-1: linear-gradient(to right, #00a1ff, #00ff6c);
-	--clr-2: #f8f8f8;
+
+
+
+	--clr12: #f8f8f8;
+	--clr1: #19a59f;
+	--clr10: #21ac91;
+	--clr9: #1e7cd3;
+	--clr8: #383b42;
+	--clr7: #8f44bb;
+	--clr6: #3d3d3d;
+	--clr5: #3e4b68;
+	--clr4: #3e4b68;
+	--clr3: #5970c1;
+	--clr2: #22252c;
+	--clr1: #fefefe;
+	--clr0: #ffffff;
 }

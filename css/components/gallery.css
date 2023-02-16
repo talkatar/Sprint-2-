@@ -1,11 +1,19 @@
+.gallery{
+    display:flex
+    displa
 
-.gallery-closed{
-    display:block
+}
+.closed-window{
+    display:none
 }
 
 
 .imgs-container{
+    display:block
+}
 
-    display:none
+.img{
+    border-radius: 30px;
+    padding: 10px;
 
 }

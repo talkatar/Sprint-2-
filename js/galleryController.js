@@ -15,16 +15,16 @@ function renderGallery() {
 function onImgSelect(imgId){
     setImg(imgId)
     renderMeme()
-}
+    onToggleMeme()}
 
 
 
 
 
 
-function onToggleModal() {
-    // document.body.classList.toggle('modal-open')
-    document.querySelector('.modal').classList.toggle('closed-modal')
+function onToggleGallery() {
+    document.querySelector('.gallery').style.display='block'
+    document.querySelector('.editor').style.display='none'
   }
   
 

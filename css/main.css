@@ -16,6 +16,7 @@
 @import 'components/footer.css';
 @import 'components/header.css';
 @import 'components/logo.css';
+@import 'components/editor.css';
 
 /* MEDIA QUERIS */
 @import 'setup/mq.css';

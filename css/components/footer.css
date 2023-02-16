@@ -1,0 +1,7 @@
+.main-footer {
+    height: 100px;
+    /* position: fixed; */
+    background: linear-gradient(#e7e1e1, #474855);
+    text-align: center;
+    align-items: center;
+}

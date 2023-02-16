@@ -3,20 +3,12 @@
 }
 
 html {
-	scroll-behavior: smooth;
-}
 
-body {
+    background-color:var(--clr2);
 	position: relative;
-	margin: 0px;
-	padding: 0px;
-	display: flex;
-	cursor: grab;
-	background-color: #f1f8ff;
-	flex-direction: column;
-	align-items: center;
-	min-height: 100vh;
-	justify-content: center;
+}
+body {
+    margin: 0;
 }
 /* 
 body {
