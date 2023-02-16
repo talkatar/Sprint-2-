@@ -12,7 +12,6 @@ function renderGallery() {
     document.querySelector('.imgs-container').innerHTML = strHTMLs.join('')
 }
 
-
 function onImgSelect(imgId){
     setImg(imgId)
     renderMeme()

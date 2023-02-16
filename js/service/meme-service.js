@@ -1,8 +1,6 @@
 'use strict'
-const SWITCHED_KEY = 'memeSwitchedK'
 let gMeme
-// var gselectedImgId
-// console.log(gselectedImgId);
+
 
 let gKeywordSearchCountMap = { 'funny': 12, 'cat': 16, 'baby': 2 }
 
@@ -33,14 +31,40 @@ gMeme = {
     selectedLineIdx: 0,
     lines: [
         {
-            txt: 'I sometimes eat Falafel', size: 20, align: 'center', color: 'white', x: 250, y: 250, font:'Mock',
+            txt: 'I sometimes eat Falafel', size: 20, align: 'center', color: 'white',
+             x: 200, y: 100, font:'Mock',
         }
         ,
         {
-            txt: 'I Love summer', size: 20, align: 'center', color: 'white', x: 150, y: 150, font:'Mock',
+            txt: 'I Love summer', size: 20, align: 'center', color: 'white', x: 200,
+             y: 200, font:'Mock',
         }
     ]
 }
+
+
+
+// {
+//     txt: 'I sometimes eat Falafel', size: 20, align: 'center', color: 'white',
+//      x: gWidthCanvas*0.5, y: 0, font:'Mock',
+// }
+// ,
+// {
+//     txt: 'I Love summer', size: 20, align: 'center', color: 'white', x: 0,
+//      y: gHeightCanvas*0.5, font:'Mock',
+// }
+// ]
+// }
+
+
+
+
+
+
+
+
+
+
 
 
 function getMeme() {
@@ -61,7 +85,6 @@ function setLineTxt(memeLine) {
 
 }
 
-
 function setColor(color) {
     gMeme.lines[gMeme.selectedLineIdx].color = color
 }
@@ -75,9 +98,7 @@ function decreaseFont() {
     gMeme.lines[gMeme.selectedLineIdx].size--
 }
 
-
 function addLine() {
-
     (gMeme.lines).push(
         {
             txt: 'I Love world', size: 20, align: 'center', color: 'white', shown: 'false', x: 75, y: 75, font:'Mock'
@@ -86,17 +107,11 @@ function addLine() {
 }
 
 function deleteLine() {
-    (gMeme.lines).splice
-
-    }
-
-
-
+    (gMeme.lines).splice(gMeme.selectedLineIdx, 1)
+}
 
 function setFont(font) {
     gMeme.lines[gMeme.selectedLineIdx].font=font
-
-
 }
 
 function alignCenter() {
@@ -124,14 +139,11 @@ function textDown() {
     // getCanvasSize().height-gMeme.lines[gMeme.selectedLineIdx].txt.size) 
 }
 
-
 function switchLine() {
     console.log(gMeme.selectedLineIdx);
     if (gMeme.selectedLineIdx === gMeme.lines.length - 1) gMeme.selectedLineIdx = 0
     else gMeme.selectedLineIdx++
     console.log(gMeme.selectedLineIdx);
-
-
 }
 
 
