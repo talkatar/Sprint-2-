@@ -32,12 +32,12 @@ gMeme = {
     lines: [
         {
             txt: 'I sometimes eat Falafel', size: 20, align: 'center', color: 'white',
-             x: 200, y: 100, font:'Mock',
+             x: 250, y: 50, font:'Impact',
         }
         ,
         {
-            txt: 'I Love summer', size: 20, align: 'center', color: 'white', x: 200,
-             y: 200, font:'Mock',
+            txt: 'I Love summer', size: 20, align: 'center', color: 'white', x: 250,
+             y: 450, font:'Impact',
         }
     ]
 }
@@ -55,11 +55,6 @@ gMeme = {
 // }
 // ]
 // }
-
-
-
-
-
 
 
 
@@ -101,13 +96,14 @@ function decreaseFont() {
 function addLine() {
     (gMeme.lines).push(
         {
-            txt: 'I Love world', size: 20, align: 'center', color: 'white', shown: 'false', x: 75, y: 75, font:'Mock'
+            txt: 'I Love world', size: 20, align: 'center', color: 'white', x: 250, y: 250, font:'Impact'
         }
     )
 }
 
 function deleteLine() {
     (gMeme.lines).splice(gMeme.selectedLineIdx, 1)
+    gMeme.selectedLineIdx=0
 }
 
 function setFont(font) {
@@ -118,19 +114,19 @@ function alignCenter() {
     gMeme.lines[gMeme.selectedLineIdx].x = getCanvasSize().width*0.5
 }
 
-function alignLeft() {
-  console.log(gMeme.lines[gMeme.selectedLineIdx].txt.length);
-    gMeme.lines[gMeme.selectedLineIdx].x = gMeme.lines[gMeme.selectedLineIdx].txt.length
+function alignLeft(gCtx) {
+    gMeme.lines[gMeme.selectedLineIdx].x = gCtx.measureText(gMeme.lines[gMeme.selectedLineIdx].txt).width*0.5+20
 }
 
-function alignRight() {
-    gMeme.lines[gMeme.selectedLineIdx].x = getCanvasSize().width-gMeme.lines[gMeme.selectedLineIdx].txt.length
+function alignRight(gCtx) {
+    gMeme.lines[gMeme.selectedLineIdx].x = getCanvasSize().width-
+    gCtx.measureText(gMeme.lines[gMeme.selectedLineIdx].txt).width*0.5-20
 }
 
 function textUP() {
     if(!gMeme.lines[gMeme.selectedLineIdx].y) return
     gMeme.lines[gMeme.selectedLineIdx].y-=10
-    // gMeme.lines[gMeme.selectedLineIdx].txt.size
+// gMeme.lines[gMeme.selectedLineIdx].txt.length
 }
 
 function textDown() {
@@ -145,10 +141,6 @@ function switchLine() {
     else gMeme.selectedLineIdx++
     console.log(gMeme.selectedLineIdx);
 }
-
-
-
-
 
 
 

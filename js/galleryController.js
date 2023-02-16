@@ -22,5 +22,9 @@ function onImgSelect(imgId){
 
 
 
-
+function onToggleModal() {
+    // document.body.classList.toggle('modal-open')
+    document.querySelector('.modal').classList.toggle('closed-modal')
+  }
+  
 

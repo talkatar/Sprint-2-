@@ -4,7 +4,7 @@
 let gElCanvas
 let gCtx
 let gBgc = 'white'
-let isDownload
+let isDownload=false
 
 
 function onInit() {
@@ -44,8 +44,6 @@ function drawImg(idImg) {
      img.src = `img/${idImg}.jpg`
      img.onload = () => {
           gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height)
-          console.log(gMeme.selectedLineIdx);
-
           let memes = getMeme()
           let textLines=memes.lines
           textLines.forEach(line=>{drawText(line.txt,line.size,line.align, line.color,
@@ -54,9 +52,12 @@ function drawImg(idImg) {
           })
           if(!isDownload){
           let meme = getMeme()
+          if(!meme.lines.length) return 
           drawRect(meme.lines[gMeme.selectedLineIdx].x,meme.lines[gMeme.selectedLineIdx].y,
-               meme.lines[gMeme.selectedLineIdx].x,meme.lines[gMeme.selectedLineIdx].size
-               )}
+          meme.lines[gMeme.selectedLineIdx].x,meme.lines[gMeme.selectedLineIdx].size
+           )
+          }
+          if(isDownload)isDownload=!isDownload
      }
 }
      
@@ -97,7 +98,10 @@ function onAddLine() {
 }
 
 function onDeleteLine() {
+     let meme = getMeme()
+     if(!meme.lines.length) return
      deleteLine()
+     document.querySelector('.meme-line').value=meme.lines[meme.selectedLineIdx].txt  
      renderMeme() 
 }
 
@@ -112,12 +116,13 @@ function onAlignCenter() {
 }
 
 function onAlignLeft() {
-     alignLeft()
+     alignLeft(gCtx)
      renderMeme()
 }
 
 function onAlignRight() {
-     alignRight()
+     
+     alignRight(gCtx)
      renderMeme()
 }
 
@@ -131,25 +136,28 @@ function onTextDown() {
      renderMeme()
 }
 
+
+
 function getCanvasSize(){
+     
      return gElCanvas
 }
 
 function onSwitchLine() {
 switchLine()
 let meme = getMeme()
-           document.querySelector('.meme-line').value=meme.lines[meme.selectedLineIdx].txt
-           renderMeme()
+document.querySelector('.meme-line').value=meme.lines[meme.selectedLineIdx].txt
+renderMeme()
 
 }
 
  function onDownload(elLink){
            isDownload='true'
            renderMeme()
-          const data = gElCanvas.toDataURL()
-          elLink.href = data 
-          elLink.download = 'my-mime' 
-
+           const data = gElCanvas.toDataURL()
+           elLink.href = data 
+           elLink.download = 'my-mime' 
+     
 }
 
  function drawRect(x,y){
@@ -176,7 +184,6 @@ let meme = getMeme()
           gCtx.closePath();
           gCtx.stroke();
  }
-
 
  function addListeners() {
      //Listen for resize ev

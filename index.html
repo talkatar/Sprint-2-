@@ -3,15 +3,27 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<!-- ADD FONT AWESOME & BOOTSTRAP -->
-
+	<script src="https://kit.fontawesome.com/dfd6d38196.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="css/main.css" />
 	<title>Meme Generator</title>
 </head>
 
-<body onload="onInit()">
+<body class="main-layout" onload="onInit()">
 
-	<h1>page</h1>
+	<header class="main-header   ">
+        <div class="main-continer">
+            <div class="logo">Meme Generator</div>
+            <nav class="main-nav  ">
+                <ul class="main-menu">
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Meme Edit</a></li>
+                </ul>
+            </nav>
+
+
+
+
+
 
 	<section class="gallery">
 
@@ -24,29 +36,24 @@
 	<section class="editor ">
 
 		<input class="meme-line" placeholder="Enter A Meme Line" oninput="OnSetLineTxt(this.value)">
-		<label for="color">Enter a color</label>
 		<input type="color"  name="color" oninput="onSetColor(this.value)" />
-		<label for="font">Enter a font</label>
-        
 		<select onchange="onSetFont(this.value)">
             <option value="Impact">Impact</option>
             <option value="Arial">Arial</option>
             <option value="David">David</option>
         </select>
-
-		<button onclick="onTextUP()" >UP</button>
-		<button onclick="onTextDown()" >Down</button>
-		<button onclick="onAlignCenter()" >Center</button>
-		<button onclick="onAlignLeft()" >Left</button>
-		<button onclick="onAlignRight()" >Right</button>
-		<button onclick="onIncreaseFont()" >Increase</button>
-		<button onclick="onDecreaseFont()" >Decrease</button>
-		<button onclick="onAddLine()" >Add Line</button>
-		<button onclick="onDeleteLine()" >Delete</button>
-		<!-- <button onclick="onDownload()" >Download</button> -->
-		<a href="#" onclick="onDownload(this)" download="file-name">Download</a>
-
-		<button onclick="onSwitchLine()" >Switch Line</button>
+		<button onclick="onSwitchLine()" ><i class="fa-sharp fa-solid fa-arrows-up-down"></i></i></button>
+		<button onclick="onTextUP()" ><i class="fa-solid fa-arrow-up"></i></button>
+		<button onclick="onTextDown()" ><i class="fa-solid fa-arrow-down"></i></button>
+		<button onclick="onAlignCenter()" ><i class="fa-solid fa-align-center"></i></button>
+		<button onclick="onAlignLeft()" ><i class="fa-solid fa-align-left"></i></button>
+		<button onclick="onAlignRight()" ><i class="fa-solid fa-align-right"></i></button>
+		<button onclick="onIncreaseFont()" ><i class="fa-solid fa-plus"></i></button>
+		<button onclick="onDecreaseFont()" ><i class="fa-solid fa-minus"></i></button>
+		<button onclick="onAddLine()" ><i class="fa-solid fa-pencil"></i></button>
+		<button onclick="onDeleteLine()" ><i class="fa-solid fa-trash"></i></button>
+		<!-- <button type="file-name" onclick="onDownload(this)"><i class="fa-solid fa-download"></button> -->
+		<a href="#" onclick="onDownload(this)" download="file-name"><i class="fa-solid fa-download"></i></a>
 		
 		<section class="canvas-container">
 			<canvas id="my-canvas" height="500" width="500"> </canvas>
@@ -55,15 +62,17 @@
 
 
 
-	<!-- BODY -->
-	<div class="books-table">
-		<table>
-			<thead>
-			<tbody class="books-table-body"></tbody>
-			</thead>
-		</table>
-	</div>
-	<!-- ADD BOOTSTRAP -->
+	<footer class="main-footer">
+        <section class="footer-content ">
+            <div class="logo">Meme Generator</div>
+            <small> &copy; Coffee Rights - Tal Katar -  </small>
+        </section>
+    </footer>
+
+
+
+
+	
 
 	<script src="js/service/storage.service.js"></script>
 	<script src="js/service/i18n.service.js"></script>
