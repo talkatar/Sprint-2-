@@ -2,3 +2,7 @@
     width: 50vw;
     height: 50vh;
   }
+  canvas{
+    border-radius: 30px;
+
+  }

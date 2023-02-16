@@ -13,26 +13,28 @@
 
 
   
-  .main-layout > * {
+  /* .main-layout > * {
     grid-column: 2;
-  }
-  .main-footer > * {
+  } */
+  /* .main-footer > * {
     grid-column: 2;
-   }
+   } */
+
    .main-header > * {
-    grid-column: 2;
-    grid-auto-flow: row;
-    align-items: center;
-    justify-content: center;
+	grid-column: 1/-1;
+
+    /* grid-column: 2; */
+    /* grid-auto-flow: row; */
+    /* align-items: center; */
+    /* justify-content: center; */
     text-decoration: none;
   }
-   .main-header, .main-footer {
+
+    /* .main-header  {
     grid-column: 1/-1;
-  }   
+  }    
 
 .editor > *{
     grid-column: 2;
-}
+} */ 
 
-
-  

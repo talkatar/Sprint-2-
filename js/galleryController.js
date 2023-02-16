@@ -17,8 +17,11 @@ function onImgSelect(imgId){
     renderMeme()
     onToggleMeme()}
 
-    
 function onToggleGallery() {
+    // document.querySelector('.gallery').classList.toggle('closed-window')
+    // document.querySelector('.editor').classList.toggle('opened-window')
+
+
     document.querySelector('.gallery').style.display='block'
     document.querySelector('.editor').style.display='none'
   }

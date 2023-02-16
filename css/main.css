@@ -12,8 +12,6 @@
 /* COMPONENTS */
 @import 'components/gallery.css';
 @import 'components/canvas.css';
-@import 'components/card.css';
-@import 'components/footer.css';
 @import 'components/header.css';
 @import 'components/logo.css';
 @import 'components/editor.css';

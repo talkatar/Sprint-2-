@@ -48,10 +48,10 @@ text-align: left;
 font-style: normal;
 letter-spacing: normal;
 line-height: normal;
-
+padding-inline-end: 250px;
+padding-inline-start: 40px;
 
 }
-
 .button{
     /* Style for "Rectangle" */
 width: 56px;

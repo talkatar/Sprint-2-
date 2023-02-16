@@ -1,24 +1,22 @@
 .editor {
+    display:none;
     background-image: url('img/Forme_1.png');
-    /* display: grid;
-    grid-template-rows: 1fr 1fr; */
+    /* display: flex; */
+    flex-direction: row-reverse;
+        justify-content: space-evenly;
+        /* opacity: 0; */
+        margin-block-start: 20px;
 }
 
 
-/* .editor{
-    display:none
-} */
-
-.closed-window {
-    display: none;
-}
+ /* .opened-window {
+    opacity: 1;} */
 
 .btn-editor {
+    /* position: absolute; */
     /* Style for "Frame" */
     width: 525px;
     height: 546px;
-    box-shadow: 1px 5px 0 #bbc4d1, inset 0 5px 0 #ffffff;
     border-radius: 30px;
     background-color: #ebeef3;
-    opacity: 0.11;
 }

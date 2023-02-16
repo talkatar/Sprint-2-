@@ -188,6 +188,8 @@ renderMeme()
 
           function onToggleMeme(){
 
+               // document.querySelector('.gallery').classList.toggle('closed-modal')
+               // document.querySelector('.editor').classList.toggle('opened-window')
 
                document.querySelector('.gallery').style.display='none'
                document.querySelector('.editor').style.display='block'
