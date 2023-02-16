@@ -12,11 +12,12 @@
 
 	<header class="main-header flex">
         <div class="main-continer flex space-between"  >
-            <div class="logo">Meme Generator</div>
+            <div class="logo">Logo</div>
             <nav class="main-nav  ">
-                <ul class="main-menu  flex  clean-list">
-					<li><a href="#" onclick="onToggleGallery()">Gallery</a></li>
-					<li><a href="#" onclick="onToggleMeme()">Meme Edit</a></li>
+                <ul class="main-menu flex clean-list text-decoration">
+					<li><a href="#" class="btn-gallery" onclick="onToggleGallery()">Gallery</a></li>
+					<li><a href="#" class="btn-about">About</a></li>
+
                 </ul>
             </nav>
 	</header>
@@ -31,26 +32,45 @@
 
 
 	<section class="editor">
+		<!-- <img src="" alt="Background Image" class="background-image"> -->
+		<div class="btn-editor" >
+			<div>
+			<input class="meme-line" placeholder="Enter A Meme Line" oninput="OnSetLineTxt(this.value)">
+			</div>
+			<div>
+				<button onclick="onSwitchLine()" ><i class="fa-sharp fa-solid fa-arrows-up-down"></i></i></button>
+				<button onclick="onDeleteLine()" ><i class="fa-solid fa-trash"></i></button>
+				<button onclick="onAddLine()" ><i class="fa-solid fa-pencil"></i></button>	
+			</div>
 
-		<input class="meme-line" placeholder="Enter A Meme Line" oninput="OnSetLineTxt(this.value)">
-		<input type="color"  name="color" oninput="onSetColor(this.value)" />
-		<select onchange="onSetFont(this.value)">
-            <option value="Impact">Impact</option>
-            <option value="Arial">Arial</option>
-            <option value="David">David</option>
-        </select>
-		<button onclick="onSwitchLine()" ><i class="fa-sharp fa-solid fa-arrows-up-down"></i></i></button>
-		<button onclick="onTextUP()" ><i class="fa-solid fa-arrow-up"></i></button>
-		<button onclick="onTextDown()" ><i class="fa-solid fa-arrow-down"></i></button>
-		<button onclick="onAlignCenter()" ><i class="fa-solid fa-align-center"></i></button>
-		<button onclick="onAlignLeft()" ><i class="fa-solid fa-align-left"></i></button>
-		<button onclick="onAlignRight()" ><i class="fa-solid fa-align-right"></i></button>
-		<button onclick="onIncreaseFont()" ><i class="fa-solid fa-plus"></i></button>
-		<button onclick="onDecreaseFont()" ><i class="fa-solid fa-minus"></i></button>
-		<button onclick="onAddLine()" ><i class="fa-solid fa-pencil"></i></button>
-		<button onclick="onDeleteLine()" ><i class="fa-solid fa-trash"></i></button>
-		<!-- <button type="file-name" onclick="onDownload(this)"><i class="fa-solid fa-download"></button> -->
-		<a href="#" onclick="onDownload(this)" download="file-name"><i class="fa-solid fa-download"></i></a>
+
+
+			<div>
+				<button onclick="onTextUP()" ><i class="fa-solid fa-arrow-up"></i></button>
+				<button onclick="onTextDown()" ><i class="fa-solid fa-arrow-down"></i></button>
+				<button onclick="onAlignCenter()" ><i class="fa-solid fa-align-center"></i></button>
+				<button onclick="onAlignLeft()" ><i class="fa-solid fa-align-left"></i></button>
+				<button onclick="onAlignRight()" ><i class="fa-solid fa-align-right"></i></button>
+				<button onclick="onIncreaseFont()" ><i class="fa-solid fa-plus"></i></button>
+				<button onclick="onDecreaseFont()" ><i class="fa-solid fa-minus"></i></button>
+				<input type="color"  name="color" oninput="onSetColor(this.value)" />
+				<select onchange="onSetFont(this.value)">
+					<option value="Impact">Impact</option>
+					<option value="Arial">Arial</option>
+					<option value="David">David</option>
+				</select>
+
+			</div>
+			
+
+			<!-- <button type="file-name" onclick="onDownload(this)"><i class="fa-solid fa-download"></button> -->
+			<a href="#" onclick="onDownload(this)" download="file-name"><i class="fa-solid fa-download"></i></a>
+			
+
+
+
+		</div>
+
 		
 		<section class="canvas-container">
 			<canvas id="my-canvas" height="500" width="500"> </canvas>
@@ -58,13 +78,12 @@
 	</section>
 
 
-
-	<footer class="main-footer grid">
+	<!-- <footer class="main-footer grid">
         <section class="footer-content flex space-between ">
             <div class="logo">Meme Generator</div>
             <small> &copy; Coffee Rights - Tal Katar -  </small>
         </section>
-    </footer>
+    </footer> -->
 
 
 

@@ -1,7 +1,12 @@
 .main-header {
+    /* width: 1257px; */
+    height: 73px;
+    border-radius: 37px;
+    background-color: var(--clr3);
+    background-image: var(--clr13);
     
-    background: linear-gradient(#e7e1e1, #474855);
-         /* position: fixed; */
 
-    top: 0;
 }
+
+
+

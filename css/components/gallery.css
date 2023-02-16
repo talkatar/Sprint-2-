@@ -1,6 +1,9 @@
 .gallery{
-    display:flex
-    displa
+    display:grid;
+    grid-auto-flow: row;
+border-radius: 10px;
+background-color: var(--clr8);
+overflow-y: scroll;
 
 }
 .closed-window{
@@ -15,5 +18,6 @@
 .img{
     border-radius: 30px;
     padding: 10px;
+    cursor: pointer;
 
 }

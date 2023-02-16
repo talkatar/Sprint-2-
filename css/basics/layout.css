@@ -1,9 +1,16 @@
 /* MAIN LAYOUT */
 
-.main-layout ,.main-footer ,.main-header {
+ .main-header {
     display: grid;
     grid-template-columns: 1fr minmax(auto, 880px) 1fr;
   }
+
+  /* .main-layout ,.main-footer ,.main-header {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 880px) 1fr;
+  } */
+
+
 
   
   .main-layout > * {

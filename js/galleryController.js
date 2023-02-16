@@ -17,11 +17,7 @@ function onImgSelect(imgId){
     renderMeme()
     onToggleMeme()}
 
-
-
-
-
-
+    
 function onToggleGallery() {
     document.querySelector('.gallery').style.display='block'
     document.querySelector('.editor').style.display='none'
