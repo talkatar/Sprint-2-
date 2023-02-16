@@ -23,77 +23,63 @@
 		</div>
 	</header>
 
-
-
-
-
 	<section class="gallery">
 		<div class="imgs-container" flex></div>
 	</section>
 
+	<div class="main-editor">
+		<section class="editor">
+			<!-- <img src="" alt="Background Image" class="background-image"> -->
+			<div class="btn-editor-container">
+				<div>
+					<button class="btn-meme-line"><input class="meme-line" placeholder="Enter A Meme Line"
+							oninput="OnSetLineTxt(this.value)">
+					</button>
+				</div>
+				<div class="first-row-btn">
+					<button class="btn-editor switch " onclick="onSwitchLine()"><i
+							class="fa-sharp fa-solid fa-arrows-up-down"></i></i></button>
+					<button class="btn-editor delete " onclick="onDeleteLine()"><i
+							class="fa-solid fa-trash"></i></button>
+					<button class="btn-editor add " onclick="onAddLine()"><i class="fa-solid fa-pencil"></i></button>
+				</div>
 
-	<section class="editor">
-		<!-- <img src="" alt="Background Image" class="background-image"> -->
-		<div class="btn-editor">
-			<div>
-				<input class="meme-line" placeholder="Enter A Meme Line" oninput="OnSetLineTxt(this.value)">
+				<div class="main-buttons">
+					<button class="btn-editor " onclick="onTextUP()"><i class="fa-solid fa-arrow-up"></i></button>
+					<button class="btn-editor " onclick="onTextDown()"><i class="fa-solid fa-arrow-down"></i></button>
+					<button class="btn-editor " onclick="onAlignCenter()"><i
+							class="fa-solid fa-align-center"></i></button>
+					<button class="btn-editor " onclick="onAlignLeft()"><i class="fa-solid fa-align-left"></i></button>
+					<button class="btn-editor " onclick="onAlignRight()"><i
+							class="fa-solid fa-align-right"></i></button>
+					<button class="btn-editor " onclick="onIncreaseFont()"><i class="fa-solid fa-plus"></i></button>
+					<button class="btn-editor " onclick="onDecreaseFont()"><i class="fa-solid fa-minus"></i></button>
+					<input type="color" name="color" oninput="onSetColor(this.value)" />
+					<select onchange="onSetFont(this.value)">
+						<option value="Impact">Impact</option>
+						<option value="Arial">Arial</option>
+						<option value="David">David</option>
+					</select>
+
+				</div>
+
+				<!-- <button type="file-name" onclick="onDownload(this)"><i class="fa-solid fa-download"></button> -->
+				<a href="#" class="btn-download" onclick="onDownload(this)" download="file-name"><i
+						class="fa-solid fa-download"></i></a>
+
 			</div>
-			<div>
-				<button onclick="onSwitchLine()"><i class="fa-sharp fa-solid fa-arrows-up-down"></i></i></button>
-				<button onclick="onDeleteLine()"><i class="fa-solid fa-trash"></i></button>
-				<button onclick="onAddLine()"><i class="fa-solid fa-pencil"></i></button>
-			</div>
 
-
-
-			<div>
-				<button onclick="onTextUP()"><i class="fa-solid fa-arrow-up"></i></button>
-				<button onclick="onTextDown()"><i class="fa-solid fa-arrow-down"></i></button>
-				<button onclick="onAlignCenter()"><i class="fa-solid fa-align-center"></i></button>
-				<button onclick="onAlignLeft()"><i class="fa-solid fa-align-left"></i></button>
-				<button onclick="onAlignRight()"><i class="fa-solid fa-align-right"></i></button>
-				<button onclick="onIncreaseFont()"><i class="fa-solid fa-plus"></i></button>
-				<button onclick="onDecreaseFont()"><i class="fa-solid fa-minus"></i></button>
-				<input type="color" name="color" oninput="onSetColor(this.value)" />
-				<select onchange="onSetFont(this.value)">
-					<option value="Impact">Impact</option>
-					<option value="Arial">Arial</option>
-					<option value="David">David</option>
-				</select>
-
-			</div>
-
-
-			<!-- <button type="file-name" onclick="onDownload(this)"><i class="fa-solid fa-download"></button> -->
-			<a href="#" onclick="onDownload(this)" download="file-name"><i class="fa-solid fa-download"></i></a>
-
-		</div>
-
-		<section class="canvas-container">
-			<canvas id="my-canvas" height="546" width="525"> </canvas>
+			<section class="canvas-container">
+				<canvas id="my-canvas" height="546" width="525"> </canvas>
+			</section>
 		</section>
-	
-
-	</section>
-	
-
-
-
-
-
-
-
+	</div>
 	<!-- <footer class="main-footer grid">
         <section class="footer-content flex space-between ">
             <div class="logo">Meme Generator</div>
             <small> &copy; Coffee Rights - Tal Katar -  </small>
         </section>
     </footer> -->
-
-
-
-
-
 
 	<script src="js/service/storage.service.js"></script>
 	<script src="js/service/i18n.service.js"></script>

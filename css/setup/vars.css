@@ -1,8 +1,8 @@
 :root {
-
-
+	--clr14: #bbc4d1;
 	--clr13:linear-gradient(-86deg, #33be6d 0%, #0c98b9 100%);
-	--clr1: #19a59f;
+	--clr12: #ebeef3;
+	--clr11: #19a59f;
 	--clr10: #21ac91;
 	--clr9: #1e7cd3;
 	--clr8: #383b42;

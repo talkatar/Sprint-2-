@@ -1,3 +1,12 @@
+
+.main-editor{
+    display: grid;
+    justify-content: end;
+
+
+}
+
+
 .editor {
     display:none;
     background-image: url('img/Forme_1.png');
@@ -12,11 +21,13 @@
  /* .opened-window {
     opacity: 1;} */
 
-.btn-editor {
+.btn-editor-container {
     /* position: absolute; */
     /* Style for "Frame" */
     width: 525px;
     height: 546px;
     border-radius: 30px;
-    background-color: #ebeef3;
+    background-color: var(--clr12);
+    /* opacity: 0.11; */
+	box-shadow: 1px 5px 0 var(--clr14), inset 0 5px 0 var(--clr0);
 }

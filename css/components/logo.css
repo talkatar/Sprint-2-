@@ -1,20 +1,16 @@
 .logo {
 /* Style for "LOGO" */
 width: 59px;
-height: 17px;
 color: #ffffff;
 font-family: Poppins;
 font-size: 22px;
 font-weight: 500;
-font-style: normal;
-letter-spacing: normal;
-line-height: normal;
-text-align: left;
 text-transform: uppercase;
 /* Text style for "LOGO" */
 font-style: normal;
 letter-spacing: normal;
 line-height: normal;
 padding-inline-start: 80px;
+margin-inline-end: 30px;
     
 }
