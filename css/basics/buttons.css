@@ -28,7 +28,7 @@ button {
     font-size: 21px;
     font-weight: 500;
     text-align: left;
-    padding-inline-end: 250px;
+    /* padding-inline-end: 250px; */
     padding-inline-start: 40px;
 }
 
@@ -180,4 +180,10 @@ input::placeholder {
     font-family: Poppins;
     font-size: 21px;
     font-weight: 500;
+}
+
+
+.btn-humburger{
+    display: none;
+    margin-inline-end:100px ;
 }

@@ -247,7 +247,11 @@ function doUploadImg(imgDataUrl, onSuccess) {
                XHR.open('POST', '//ca-upload.com/here/upload.php')
                XHR.send(formData)
 }
-           
+function onToggleHamburger() {
+     document.body.classList.toggle('menu-open')
+     // document.querySelector('.main-screen').classList.toggle('menu-open')
+   }
+   
 
 
 
