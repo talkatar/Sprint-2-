@@ -24,11 +24,14 @@
 	</header>
 
 	<section class="gallery">
-		<div class="imgs-container" flex></div>
+		<div class="imgs-container scroll-container" flex></div>
 	</section>
 
 	<div class="main-editor">
 		<section class="editor">
+			<section class="canvas-container">
+				<canvas id="my-canvas" height="546" width="525"> </canvas>
+			</section>
 			<!-- <img src="" alt="Background Image" class="background-image"> -->
 			<div class="btn-editor-container">
 				<div>
@@ -52,34 +55,44 @@
 					<button class="btn-editor " onclick="onAlignLeft()"><i class="fa-solid fa-align-left"></i></button>
 					<button class="btn-editor " onclick="onAlignRight()"><i
 							class="fa-solid fa-align-right"></i></button>
-					<button class="btn-editor " onclick="onIncreaseFont()"><i class="fa-solid fa-plus"></i></button>
-					<button class="btn-editor " onclick="onDecreaseFont()"><i class="fa-solid fa-minus"></i></button>
-					<input type="color" name="color" oninput="onSetColor(this.value)" />
-					<select onchange="onSetFont(this.value)">
-						<option value="Impact">Impact</option>
-						<option value="Arial">Arial</option>
-						<option value="David">David</option>
-					</select>
+					<span class="color" ><input class="btn-editor  " type="color" name="color"
+							oninput="onSetColor(this.value)" /></span>
 
+
+
+
+						<div>
+							<button class="btn-impact">
+								<select class="impact" onchange="onSetFont(this.value)">
+									<option value="Impact">Impact</option>
+									<option value="Arial">Arial</option>
+									<option value="David">David</option>
+								</select>
+							</button>
+									<button class="btn-editor " onclick="onIncreaseFont()"><i class="fa-solid fa-plus"></i></button>
+							<button class="btn-editor " onclick="onDecreaseFont()"><i
+									class="fa-solid fa-minus"></i></button>
+							</button>
+	
+						</div>
 				</div>
 
-				<!-- <button type="file-name" onclick="onDownload(this)"><i class="fa-solid fa-download"></button> -->
-				<a href="#" class="btn-download" onclick="onDownload(this)" download="file-name"><i
-						class="fa-solid fa-download"></i></a>
+				<button class="btn-share" onclick="onShareFb()"> Share</button>
+						<button class="btn-download">
+							<a href="#" class="download"  onclick="onDownload(this)" download="file-name">Download</a>
+						</button>
+
 
 			</div>
 
-			<section class="canvas-container">
-				<canvas id="my-canvas" height="546" width="525"> </canvas>
-			</section>
-		</section>
+			<!-- <button type="file-name" onclick="onDownload(this)"><i class="fa-solid fa-download"></button> -->
+			
+
 	</div>
-	<!-- <footer class="main-footer grid">
-        <section class="footer-content flex space-between ">
-            <div class="logo">Meme Generator</div>
-            <small> &copy; Coffee Rights - Tal Katar -  </small>
-        </section>
-    </footer> -->
+
+
+	</section>
+	</div>
 
 	<script src="js/service/storage.service.js"></script>
 	<script src="js/service/i18n.service.js"></script>

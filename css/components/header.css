@@ -7,7 +7,8 @@
     background-color: var(--clr3);
     background-image: var(--clr13);
     grid-column: 1/-1;
-    
+    margin:15px 15px 15px 15px ;
+
 
 }
 

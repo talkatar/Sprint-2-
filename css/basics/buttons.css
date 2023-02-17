@@ -10,10 +10,7 @@ button {
     border-radius: 20px;
     background-color: var(--clr1);
     text-decoration: none;
-
     /* Style for "Gallery" */
-    width: 74px;
-    height: 22px;
     color: var(--clr10);
     font-family: Poppins;
     font-size: 21px;
@@ -30,9 +27,6 @@ button {
     font-family: Poppins;
     font-size: 21px;
     font-weight: 500;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: normal;
     text-align: left;
     padding-inline-end: 250px;
     padding-inline-start: 40px;
@@ -45,20 +39,20 @@ button {
     box-shadow: 1px 5px 0 rgba(92, 92, 92, 0.55), inset 0 5px 0 rgba(255, 255, 255, 0.58);
     border-radius: 10px;
     background-color: #ffffff;
-    background-color: #ffffff;
 }
 
 .main-buttons {
     width: 445px;
-    height: 151px;
+    height: 150px;
     border-radius: 15px;
     background-color: var(--clr11);
     text-align: center;
     margin-inline-start: 40px;
+   
 
 }
 
-.meme-line {
+.meme-line  {
     /* Style for "can’t get" */
     width: 399px;
     height: 22px;
@@ -66,22 +60,16 @@ button {
     font-family: Poppins;
     font-size: 25px;
     font-weight: 500;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: normal;
-    text-align: left;
+    text-align: center;
     text-transform: uppercase;
     /* Text style for "can’t get" */
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: normal;
 }
 
 .btn-meme-line {
     /* Style for "Rectangle" */
     width: 445px;
     height: 57px;
-    box-shadow: 1px 5px 0 #bbc4d1, inset 0 5px 0 #ffffff;
+    box-shadow: 1px 5px 0 #bbc4d1, inset 0 5px 0 #bbc4d1;
     border-radius: 28px;
     background-color: #ebeef3;
     margin: 25px 40px 20px 40px;
@@ -92,27 +80,24 @@ input::placeholder {
     text-align: center;
 }
 
-
 .first-row-btn {
     text-align: center;
-    margin-block-end:40px ;
+    margin-block-end: 25px;
 }
 
-.btn-editor{
-    width: 58px;
-    height: 53px;
+.btn-editor {
+    width: 50px;
+    height: 45px;
     border-radius: 10px;
     background-color: #ebeef3;
     margin: 10px 10px 10px 10px;
     box-shadow: 1px 5px 0 rgba(92, 92, 92, 0.55), inset 0 5px 0 rgba(255, 255, 255, 0.58);
-
+    cursor: pointer;
 }
 
 .delete {
-
-box-shadow: 1px 5px 0 #8c0606, inset 0 5px 0 rgba(255, 255, 255, 0.58);
-
-background-image: linear-gradient(-38deg, #cf1d37 0%, #cf1d37 1%, #f05036 100%);
+    box-shadow: 1px 5px 0 #8c0606, inset 0 5px 0 rgba(255, 255, 255, 0.58);
+    background-image: linear-gradient(-38deg, #cf1d37 0%, #cf1d37 1%, #f05036 100%);
 }
 
 .switch {
@@ -120,25 +105,79 @@ background-image: linear-gradient(-38deg, #cf1d37 0%, #cf1d37 1%, #f05036 100%);
     background-image: linear-gradient(-38deg, #66c4dc 0%, #40b1ce 50%, #0c98bb 100%);
 }
 
-.btn-add {
-box-shadow: 1px 5px 0 #015d33, inset 0 5px 0 rgba(255, 255, 255, 0.58);
-background-image: linear-gradient(-38deg, #42eb5c 0%, #37b34a 100%);
+.add {
+    box-shadow: 1px 5px 0 #015d33, inset 0 5px 0 rgba(255, 255, 255, 0.58);
+    background-image: linear-gradient(-38deg, #42eb5c 0%, #37b34a 100%);
 }
 
-
-
-
-
-
-.btn-downloads{
-
+.btn-impact {
+    cursor: auto;
     /* Style for "Rectangle" */
-width: 213px;
-height: 51px;
-box-shadow: 1px 6px 0 #632687, inset 0 5px 0 #ffffff;
-border-radius: 15px;
-background-color: #8f44bb;
+    width: 236px;
+    height: 45px;
+    box-shadow: 1px 5px 0 rgba(92, 92, 92, 0.55), inset 0 5px 0 rgba(255, 255, 255, 0.58);
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin: 10px 10px 10px 10px;
 }
 
+.impact {
+    /* Style for "impact" */
+    cursor: pointer;
+    width: 130px;
+    height: 30px;
+    color: #22252c;
+    font-family:Poppins-Semi-bold;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: left;
+    text-transform: uppercase;
+    margin-block-start: -50px;
+}
+
+.color {
+    /* margin-inline-start:5px ; */
+    text-align: center;
+}
+
+.btn-download {
+    /* Style for "Rectangle" */
+    margin-block-start: 15px;
+
+    cursor: auto;
+    width: 213px;
+    height: 51px;
+    box-shadow: 1px 6px 0 #632687, inset 0 5px 0 #bf84da;
+    border-radius: 15px;
+    background-color: #8f44bb;
+}
+
+.download {
+    /* Style for "Download" */
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Poppins;
+    font-size: 21px;
+    font-weight: 500;
+    text-align: left;
+   
+}
+
+.btn-share {
+    /* Style for "Rectangle" */
+    margin-inline-start: 40px;
+    margin-inline-end: 15px;
+    margin-block-start: 15px;
 
 
+
+    width: 213px;
+    height: 51px;
+    box-shadow: 1px 6px 0 #165c9c, inset 0 5px 0 #57b2e8;
+    border-radius: 15px;
+    background-color: #1e7cd3;
+    color: #ffffff;
+    font-family: Poppins;
+    font-size: 21px;
+    font-weight: 500;
+}

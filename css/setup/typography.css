@@ -1,4 +1,9 @@
 @font-face {
-    font-family: poppoins;
+    font-family: Poppins;
     src: url(/fonts/poppins/Poppins-Regular.ttf);
+} 
+
+@font-face {
+    font-family:Poppins-Semi-bold;
+    src: url(/fonts/poppins/Poppins-SemiBold.ttf);
 } 

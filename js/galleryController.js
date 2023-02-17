@@ -22,7 +22,7 @@ function onToggleGallery() {
     // document.querySelector('.editor').classList.toggle('opened-window')
 
 
-    document.querySelector('.gallery').style.display='block'
+    document.querySelector('.gallery').style.display='grid'
     document.querySelector('.editor').style.display='none'
   }
   
