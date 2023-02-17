@@ -21,7 +21,6 @@
 		font-size: 44px;
 		margin-inline-start: 100px;
 	}
-	
 	.btn-humburger {
 		display: block;
 	}
@@ -29,7 +28,7 @@
 		display: none;
 		border-radius: 20px;
 	}
-	.main-header .main-nav  {
+	.main-header .main-nav {
 		/* display: none; */
 		position: fixed;
 		top: 0;
@@ -40,43 +39,123 @@
 		transform: translateX(100%);
 		color: #000000;
 	}
-	.main-nav{
+	.main-nav {
 		display: block;
 	}
-	
-	  body.menu-open .main-nav {
+	body.menu-open .main-nav {
 		display: flex;
 		justify-content: center;
-    align-items: center;
+		align-items: center;
 		top: 179px;
-			left: 10%;
-			right: 2%;
-			transform: translateX(0);
-		}
-		.main-header .main-menu {
-			flex-direction: column;
-		  }
-		  .btn-about {
-			padding-inline-start: 7px;
-			margin-block-start:10px ;
-		}
+		left: 10%;
+		right: 2%;
+		transform: translateX(0);
+	}
+	.main-header .main-menu {
+		flex-direction: column;
+	}
+	.btn-about {
+		padding-inline-start: 7px;
+		margin-block-start: 10px;
+	}
+	.btn-editor-container {
+		width: 300px;
+		height: 300px;
+	}
+	.btn-editor {
+		width: 25px;
+		height: 25px;
+		margin: 2px 2px 2px 2px;
+	}
+	canvas {
+		width:300px ;
+		height: 300px;
+		margin-inline-end:0px ;
+	}
+	
 
-		.btn-editor-container {
-			width:300px;
-			height:300px;
+	.canvas-container{
+		background-size: 300px 300px;
 		
-		}
-		
-
-		.btn-editor {
-			width: 35px;
-			height: 35px;
-
-
-
-
-		
+	
 }
+.first-row-btn {
+    text-align: center;
+    margin-block-end: 10px;
+}
+
+.meme-line  {
+    /* Style for "can’t get" */
+    width: 200px;
+    height: 22px;
+    font-size: 15px;
+    
+}
+
+.btn-meme-line {
+    /* Style for "Rectangle" */
+    width: 250px;
+    height: 30px;
+	margin: 10px 10px 10px 25px;
+    margin-block-start: 15px;   
+}
+
+.main-buttons {
+    width: 220px;
+    height: 100px;
+    border-radius: 15px;
+    background-color: var(--clr11);
+    text-align: center;
+    margin-inline-start: 40px;
+}
+
+.btn-impact {
+    cursor: auto;
+    /* Style for "Rectangle" */
+    width: 200px;
+    height: 25px;
+    margin: 10px 10px 2px 10px;
+}
+
+.impact {
+    /* Style for "impact" */
+    cursor: pointer;
+    width: 130px;
+    height: 20px;
+    font-size: 10px;
+    
+}
+
+
+.btn-download {
+    /* Style for "Rectangle" */
+    margin-block-start: 15px;
+    width: 120px;
+    height: 20px;
+}
+
+.download {
+    /* Style for "Download" */
+    font-size: 10px;
+}
+
+.btn-share {
+    /* Style for "Rectangle" */
+    margin-inline-start: 10px;
+    margin-inline-end: 15px;
+    margin-block-start: 15px;
+    width: 120px;
+    height: 20px;
+    font-size: 10px;
+    
+}
+
+
+
+
+
+
+
 
 
 /* MEDIUM */
@@ -85,13 +164,98 @@
 /* 740px */
 
 @media (min-width: 740px) {
-
-
 	.btn-about {
 		/* Style for "About" */
-		
 		padding-inline-end: 50px;
 	}
+
+
+
+	.canvas-container{
+		background-size: 300px 300px;
+		
+	
+}
+.first-row-btn {
+    text-align: center;
+    margin-block-end: 10px;
+}
+
+.meme-line  {
+    /* Style for "can’t get" */
+    width: 200px;
+    height: 22px;
+    font-size: 15px;
+    
+}
+
+.btn-meme-line {
+    /* Style for "Rectangle" */
+    width: 250px;
+    height: 30px;
+	margin: 10px 10px 10px 25px;
+    margin-block-start: 15px;   
+}
+
+.main-buttons {
+    width: 220px;
+    height: 100px;
+    border-radius: 15px;
+    background-color: var(--clr11);
+    text-align: center;
+    margin-inline-start: 40px;
+}
+
+.btn-impact {
+    cursor: auto;
+    /* Style for "Rectangle" */
+    width: 200px;
+    height: 25px;
+    margin: 10px 10px 2px 10px;
+}
+
+.impact {
+    /* Style for "impact" */
+    cursor: pointer;
+    width: 130px;
+    height: 20px;
+    font-size: 10px;
+    
+}
+
+
+.btn-download {
+    /* Style for "Rectangle" */
+    margin-block-start: 15px;
+    width: 120px;
+    height: 20px;
+}
+
+.download {
+    /* Style for "Download" */
+    font-size: 10px;
+}
+
+.btn-share {
+    /* Style for "Rectangle" */
+    margin-inline-start: 10px;
+    margin-inline-end: 15px;
+    margin-block-start: 15px;
+    width: 120px;
+    height: 20px;
+    font-size: 10px;
+    
+}
+
+
+
+
+
+
+
+
+
+
 }
 
 
@@ -100,66 +264,11 @@
 
 /* 1270px */
 
-
 @media (min-width: 1270px) {
 
 
 
 	
-
-.btn-editor-container {
-	width:400px;
-	height:400px;
-
-}
 }
 
 
-/* MOBILE ONLY */
-
-
-/* @media (max-width: 740px) { */
-
-
-/* SCREEN for when you want to open a modal */
-
-
-/* .main-screen {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgb(0 0 0 / 60%);
-		cursor: pointer;
-		pointer-events: none;
-		opacity: 0;
-		transition: opacity 0.6s;
-	}
-
-	body.menu-open .main-screen {
-		pointer-events: auto;
-		opacity: 1;
-		user-select: none;
-	}
-} */
-
-
-/* MEDIUM */
-
-
-/* 740px */
-
-
-/* @media (min-width: 740px) {
-} */
-
-
-/* LARGE */
-
-
-/* 1060px */
-
-
-/* @media (min-width: 1060px) {
-} */
