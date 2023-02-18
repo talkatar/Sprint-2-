@@ -301,6 +301,7 @@ function onSetLang(lang) {
 
 
 
+
 function addListeners() {
      //Listen for resize ev
      window.addEventListener('resize', () => {

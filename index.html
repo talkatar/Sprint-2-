@@ -25,20 +25,38 @@
 				</ul>
 			</nav>
 			<div>
-
 				<a href="#"  onclick="onToggleHamburger()">
 					<img class="btn-humburger" src="/img/hamburger.png" alt="Image Description"></a>
 
 			</div>
 		</div>
-		
 	</header>
 
 
-
-
 	<section class="gallery">
-		<div class="imgs-container scroll-container" flex></div>
+		<div class="search-area">
+		<form class="flex align-center  " onsubmit="onSearch(event)">
+	
+		<input class="browser-style" list="browsers" name="browser" id="browser">
+		<datalist id="browsers">
+		<option value="All">
+		<option value="President">
+		<option value="Animals">
+		<option value="Baby">
+		<option value="Celebs">
+		<option value="Movies">
+		</datalist>
+		<button class="btn-search"><img  src="/img/search.png" alt="Image Description"></a>
+		</button>
+		</form>
+		</div>
+		
+		
+
+
+
+		<div class="imgs-container scroll-container" flex>
+		</div>
 	</section>
 
 	<div class="main-editor">

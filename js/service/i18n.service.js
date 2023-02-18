@@ -27,7 +27,7 @@ var gTrans = {
         he: 'עברית'
     },
     download: {
-        en:  'Download',
+        en: 'Download',
         he: 'הורד'
     },
     share: {
@@ -45,7 +45,7 @@ var gTrans = {
         he: 'אימפקט'
     },
 
-   arial: {
+    arial: {
         en: 'Arial ',
         he: 'אריאל'
     },
@@ -54,8 +54,6 @@ var gTrans = {
         en: 'David ',
         he: 'דוד שורת מם'
     },
-    
-  
 
 }
 
@@ -87,9 +85,9 @@ function doTrans() {
         const transKey = el.dataset.trans
         const translation = getTrans(transKey)
         if (el.placeholder) el.placeholder = translation
-         else el.innerText = translation
+        else el.innerText = translation
 
-       
+
     })
 }
 
