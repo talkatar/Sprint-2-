@@ -26,7 +26,7 @@ var gTrans = {
         en: 'He',
         he: 'עברית'
     },
-    download: {
+    'download-trans': {
         en: 'Download',
         he: 'הורד'
     },
@@ -91,7 +91,6 @@ function setLang(lang) {
     gCurrLang = lang
 }
 
-
 function getTrans(transKey) {
     const transMap = gTrans[transKey]
     if (!transMap) return 'UNKNOWN'
@@ -107,8 +106,6 @@ function doTrans() {
         const translation = getTrans(transKey)
         if (el.placeholder) el.placeholder = translation
         else el.innerText = translation
-
-
     })
 }
 

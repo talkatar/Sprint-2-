@@ -1,19 +1,13 @@
-/* .canvas-container {
-    width: 50vw;
-    height: 50vh;
-  } */
+
   canvas{
     border-radius: 25px;
     margin-inline-start: 85px;
     margin-inline-end: 90px;
     margin-block-start: 5px;
-   
   }
 
 .canvas-container{
-
     background-image: url('/img/Forme_1.png');
-
   }
 
 

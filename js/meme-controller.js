@@ -1,14 +1,11 @@
 'use strict'
 
-
 let gElCanvas
 let gCtx
 let gBgc = 'white'
 let isDownload = false
 
-
 function onInit() {
-
      gElCanvas = document.querySelector('canvas')
      gCtx = gElCanvas.getContext('2d')
      renderGallery()
@@ -17,15 +14,11 @@ function onInit() {
      renderCanvas()
      renderMeme()
      // window.addEventListener('resize', resizeCanvas)
-
-
 }
 
 function renderMeme() {
      let memes = getMeme()
      drawImg(memes.selectedImgId, gElCanvas.width * 0.5, gElCanvas.height * 0.5)
-
-
 }
 
 function resizeCanvas() {
@@ -47,18 +40,10 @@ function resizeCanvas() {
      // }, 1000);
 }
 
-
-
-
-
-
 function renderCanvas() {
      gCtx.fillStyle = gBgc
      gCtx.fillRect(0, 0, gElCanvas.width, gElCanvas.height)
 }
-
-
-
 
 function drawImg(idImg) {
      const img = new Image()
@@ -70,8 +55,8 @@ function drawImg(idImg) {
           textLines.forEach(line => {
                drawText(line.txt, line.size, line.align, line.color,
                     line.x, line.y, line.font)
-
           })
+
           if (!isDownload) {
                let meme = getMeme()
                if (!meme.lines.length) return
@@ -79,6 +64,7 @@ function drawImg(idImg) {
                     meme.lines[gMeme.selectedLineIdx].x, meme.lines[gMeme.selectedLineIdx].size
                )
           }
+
           if (isDownload) isDownload = !isDownload
      }
 }
@@ -158,10 +144,7 @@ function onTextDown() {
      renderMeme()
 }
 
-
-
 function getCanvasSize() {
-
      return gElCanvas
 }
 
@@ -170,7 +153,6 @@ function onSwitchLine() {
      let meme = getMeme()
      document.querySelector('.meme-line').value = meme.lines[meme.selectedLineIdx].txt
      renderMeme()
-
 }
 
 function onDownload(elLink) {
@@ -181,7 +163,6 @@ function onDownload(elLink) {
      const data = gElCanvas.toDataURL()
      elLink.href = data
      elLink.download = 'my-mime'
-
 }
 
 function download(elLink) {
@@ -190,7 +171,6 @@ function download(elLink) {
      elLink.href = data
      elLink.download = 'my-mime'
 }
-
 
 function drawRect(x, y) {
      let meme = getMeme()
@@ -221,11 +201,8 @@ function onToggleMeme() {
 
      // document.querySelector('.gallery').classList.toggle('closed-modal')
      // document.querySelector('.editor').classList.toggle('opened-window')
-
      document.querySelector('.gallery').style.display = 'none'
      document.querySelector('.editor').style.display = 'flex'
-
-
 }
 
 function onShareFb() {
@@ -242,38 +219,6 @@ function onShareFb() {
      doUploadImg(imgDataUrl, onSuccess)
 }
 
-function doUploadImg(imgDataUrl, onSuccess) {
-     // Pack the image for delivery
-     const formData = new FormData()
-     formData.append('img', imgDataUrl)
-
-     // Send a post req with the image to the server
-     const XHR = new XMLHttpRequest()
-     XHR.onreadystatechange = () => {
-          // If the request is not done, we have no business here yet, so return
-          if (XHR.readyState !== XMLHttpRequest.DONE) return
-          // if the response is not ok, show an error
-          if (XHR.status !== 200) return console.error('Error uploading image')
-          const { responseText: url } = XHR
-          // Same as
-          // const url = XHR.responseText
-
-          // If the response is ok, call the onSuccess callback function, 
-          // that will create the link to facebook using the url we got
-          console.log('Got back live url:', url)
-          onSuccess(url)
-     }
-     XHR.onerror = (req, ev) => {
-          console.error('Error connecting to server with request:', req, '\nGot response data:', ev)
-     }
-     XHR.open('POST', '//ca-upload.com/here/upload.php')
-     XHR.send(formData)
-}
-function onToggleHamburger() {
-     document.body.classList.toggle('menu-open')
-     // document.querySelector('.main-screen').classList.toggle('menu-open')
-}
-
 function onSetLang(lang) {
          setLang(lang)
 
@@ -283,23 +228,14 @@ function onSetLang(lang) {
           document.querySelector('.btn-he').style.marginInlineStart='7px';
           document.querySelector('.impact').style.textAlign='right';
           document.querySelector('.scroll-container').style.direction='ltr';
-          // document.querySelector('.form').style.direction='ltr';
-
           }
 
      else {
           document.body.classList.remove('rtl')
-
           document.querySelector('.impact').style.textAlign='left';
      }
-
      doTrans()
 }
-
-
-
-
-
 
 function addListeners() {
      //Listen for resize ev

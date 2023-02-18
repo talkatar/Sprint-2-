@@ -1,12 +1,4 @@
 
-/* .main-editor{
-    display: grid;
-    justify-content: end;
-
-
-} */
-
-
 .editor {
     display:none;
     /* display: flex; */
@@ -15,20 +7,12 @@
         margin-block-start: 20px;
 }
 
- /* .opened-window {
-    opacity: 1;} */
-
 .btn-editor-container {
-    /* position: absolute; */
-    /* Style for "Frame" */
     margin-inline-start: 90px;
-
     margin-inline-end: 95px;
-
     width: 525px;
     height: 546px;
     border-radius: 30px;
     background-color: #383b42;
-    /* opacity: 0.11; */
-	/* box-shadow: 1px 5px 0 var(--clr14), inset 0 5px 0 var(--clr0); */
+   
 }

@@ -1,41 +1,11 @@
 /* MAIN LAYOUT */
-
+/* 
  .main-header {
     display: grid;
     grid-template-columns: 1fr minmax(auto, 880px) 1fr;
-  }
-
-  /* .main-layout ,.main-footer ,.main-header {
-    display: grid;
-    grid-template-columns: 1fr minmax(auto, 880px) 1fr;
   } */
-
-
-
-  
-  /* .main-layout > * {
-    grid-column: 2;
-  } */
-  /* .main-footer > * {
-    grid-column: 2;
-   } */
-
+/* 
    .main-header > * {
 	grid-column: 1/-1;
-
-    /* grid-column: 2; */
-    /* grid-auto-flow: row; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    text-decoration: none;
-  }
-  
-
-    /* .main-header  {
-    grid-column: 1/-1;
-  }    
-
-.editor > *{
-    grid-column: 2;
-} */ 
-
+  text-decoration: none;
+  } */

@@ -2,8 +2,6 @@
 let gMeme
 let gFilterdImgs = []
 
-
-
 let gKeywordSearchCountMap = { 'funny': 12, 'cat': 16, 'baby': 2 }
 
 let gImgs = [{ id: 1, url: 'img/1.jpg', keywords: ['presidents', 'all'] },
@@ -24,10 +22,7 @@ let gImgs = [{ id: 1, url: 'img/1.jpg', keywords: ['presidents', 'all'] },
 { id: 16, url: 'img/16.jpg', keywords: ['celebs', 'all'] },
 { id: 17, url: 'img/17.jpg', keywords: ['presidents', 'all'] },
 { id: 18, url: 'img/18.jpg', keywords: ['movies', 'all'] },
-
 ];
-
-
 
 function setImg(selectedImgId) {
     var gselectedImgId = selectedImgId
@@ -64,12 +59,6 @@ gMeme = {
 // ]
 // }
 
-
-
-
-
-
-
 function getMeme() {
     return gMeme
 }
@@ -85,7 +74,6 @@ function setImg(selectedImgId) {
 function setLineTxt(memeLine) {
     console.log(gMeme.selectedLineIdx);
     gMeme.lines[gMeme.selectedLineIdx].txt = memeLine
-
 }
 
 function setColor(color) {
@@ -149,7 +137,6 @@ function switchLine() {
     else gMeme.selectedLineIdx++
     console.log(gMeme.selectedLineIdx);
 }
-
 
 function search(keyword) {
     // gFilterdImgs = gImgs

@@ -11,7 +11,6 @@
 <body class="main-layout" onload="onInit()">
 	<div class="hamburger-screen"></div>
 
-
 	<header class="main-header grid">
 		<div class="main-continer flex space-between align-center">
 			<div data-trans="logo" class="logo">Logo</div>
@@ -27,11 +26,9 @@
 			<div>
 				<a href="#"  onclick="onToggleHamburger()">
 					<img class="btn-humburger" src="/img/hamburger.png" alt="Image Description"></a>
-
 			</div>
 		</div>
 	</header>
-
 
 	<section class="gallery">
 		<div class="search-area">
@@ -46,27 +43,20 @@
 		<option data-trans="celebs" value="Celebs">
 		<option data-trans="movies" value="Movies">
 		</datalist>
-		<button class="btn-search"><img  src="/img/search.png" alt="Image Description"></a>
+		<button class="btn-search"><img  src="/img/search.png" alt="search button"></a>
 		</button>
 		</form>
 		</div>
 		
-		
-
-
-
 		<div class="imgs-container scroll-container" flex>
 		</div>
 	</section>
-
+	
 	<div class="main-editor">
-
 		<section class="editor">
-
 			<section class="canvas-container">
 				<canvas id="my-canvas" height="546" width="525"> </canvas>
 			</section>
-
 			<div class="btn-editor-container">
 				<div>
 					<button  class="btn-meme-line"><input data-trans="meme-line-placeholder" class="meme-line" placeholder="Enter A Meme Line"
@@ -92,9 +82,6 @@
 					<span class="color"><input class="btn-editor  " type="color" name="color"
 							oninput="onSetColor(this.value)" /></span>
 
-
-
-
 					<div>
 						<button class="btn-impact">
 							<select class="impact" onchange="onSetFont(this.value)">
@@ -107,25 +94,18 @@
 						<button class="btn-editor " onclick="onDecreaseFont()"><i
 								class="fa-solid fa-minus"></i></button>
 						</button>
-
 					</div>
 				</div>
 
 				<button data-trans="share" class="btn-share" onclick="onShareFb()"><i class="fa-solid fa-share-nodes"></i>  Share</button>
-				<button data-trans="download" class="btn-download">
+				<button data-trans="download-trans" class="btn-download">
 					<a href="#" class="download" onclick="onDownload(this)" download="file-name">
 						<i class="fa-solid fa-download"></i> Download</a>
 				</button>
-
-
 			</div>
 
 			<!-- <button type="file-name" onclick="onDownload(this)"><i class="fa-solid fa-download"></button> -->
-
-
 	</div>
-
-
 	</section>
 	</div>
 
