@@ -275,9 +275,7 @@ function onToggleHamburger() {
 }
 
 function onSetLang(lang) {
-    
-     console.log(lang);
-     setLang(lang)
+         setLang(lang)
 
      if(gCurrLang === 'he') {
            document.body.classList.add('rtl')
@@ -285,12 +283,13 @@ function onSetLang(lang) {
           document.querySelector('.btn-he').style.marginInlineStart='7px';
           document.querySelector('.impact').style.textAlign='right';
           document.querySelector('.scroll-container').style.direction='ltr';
+          // document.querySelector('.form').style.direction='ltr';
+
           }
 
      else {
           document.body.classList.remove('rtl')
-          document.querySelector('.btn-en').style.marginInlineStart='20px';
-          document.querySelector('.btn-he').style.marginInlineStart='20px';
+
           document.querySelector('.impact').style.textAlign='left';
      }
 

@@ -55,6 +55,36 @@ var gTrans = {
         he: 'דוד שורת מם'
     },
 
+    all: {
+        en: 'All ',
+        he: 'הכל'
+    },
+
+    presidents: {
+        en: 'Presidents ',
+        he: 'נשיאים'
+    },
+
+    animals: {
+        en: 'Animals ',
+        he: 'חיות'
+    },
+
+    baby: {
+        en: 'Baby ',
+        he: 'תינוק'
+    },
+    
+    celebs: {
+        en: 'Celebs ',
+        he: ' מפורסמים'
+    },
+
+    movies: {
+        en: 'Movies ',
+        he: ' סרטים'
+    },
+
 }
 
 function setLang(lang) {
@@ -63,25 +93,16 @@ function setLang(lang) {
 
 
 function getTrans(transKey) {
-    // if key is unknown return 'UNKNOWN'
     const transMap = gTrans[transKey]
     if (!transMap) return 'UNKNOWN'
-    // get from gTrans
     let translation = transMap[gCurrLang]
-    // if translation not found - use english
     if (!translation) translation = transMap.en
     return translation
 }
 
 function doTrans() {
-    console.log('h');
     var els = document.querySelectorAll('[data-trans]')
-    console.log(els);
     els.forEach(el => {
-
-        console.log(el.dataset);
-        console.log(el.dataset.trans);
-
         const transKey = el.dataset.trans
         const translation = getTrans(transKey)
         if (el.placeholder) el.placeholder = translation
