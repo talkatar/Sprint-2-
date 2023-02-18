@@ -1,9 +1,7 @@
-/* flex helpers */
 
 .grid{
     display: grid;
 }
-
 
 .flex {
     display: flex;
@@ -17,7 +15,6 @@
     align-items: center;
 }
 
-
 .clean-list {
     margin: 0;
     padding: 0;
@@ -27,49 +24,3 @@
 .text-decoration{
 text-decoration: none
  }
-
-/* }
-.flex.column {
-	flex-direction: column;
-}
-
-.flex.space-around {
-	justify-content: space-around;
-}
-
-.flex.space-between {
-	justify-content: space-between;
-}
-
-.flex.align-center {
-	align-items: center;
-}
-
-.flex.center-all {
-	justify-content: center;
-	align-items: center;
-}
-
-.flex.even-columns > * {
-	width: 100%;
-} */
-
-/* grid helpers */
-/* .grid {
-	display: grid;
-}
-.grid.center-all {
-	justify-content: center;
-	align-content: center;
-} */
-
-/* Cleaning settings */
-/* .clean {
-	margin: 0;
-	padding: 0;
-} */
-
-/* list helpers */
-/* .clean.list {
-	list-style-type: none;
-} */

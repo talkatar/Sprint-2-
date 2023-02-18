@@ -1,9 +1,7 @@
 'use strict'
 let gMeme
 let gFilterdImgs = []
-
 let gKeywordSearchCountMap = { 'funny': 12, 'cat': 16, 'baby': 2 }
-
 let gImgs = [{ id: 1, url: 'img/1.jpg', keywords: ['presidents', 'all'] },
 { id: 2, url: 'img/2.jpg', keywords: ['animals', 'all'] },
 { id: 3, url: 'img/3.jpg', keywords: ['baby', 'animals', 'all'] },
@@ -44,8 +42,6 @@ gMeme = {
         }
     ]
 }
-
-
 
 // {
 //     txt: 'I sometimes eat Falafel', size: 20, align: 'center', color: 'white',
@@ -143,7 +139,7 @@ function search(keyword) {
     gFilterdImgs = gImgs.filter(img => img.keywords.some(key => key === keyword))
 }
 
-function getFilterdImg () {
+function getFilterdImg() {
     return gFilterdImgs
 }
 

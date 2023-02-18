@@ -2,7 +2,6 @@
 
 let gCurrLang = 'en'
 
-
 var gTrans = {
     logo: {
         en: 'Logo',
@@ -74,7 +73,7 @@ var gTrans = {
         en: 'Baby ',
         he: 'תינוק'
     },
-    
+
     celebs: {
         en: 'Celebs ',
         he: ' מפורסמים'

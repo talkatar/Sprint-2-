@@ -16,15 +16,17 @@
 			<div data-trans="logo" class="logo">Logo</div>
 			<nav class="main-nav  ">
 				<ul class="main-menu flex clean-list  space-between">
-					<li><a href="#" data-trans="gallery" class="btn-gallery" onclick="onToggleGallery()">Gallery</a></li>
+					<li><a href="#" data-trans="gallery" class="btn-gallery" onclick="onToggleGallery()">Gallery</a>
+					</li>
 					<li><a href="#" data-trans="about" class="btn-about">About</a></li>
 					<li><button data-trans="en" class="btn-en" onclick="onSetLang('en')">En</button></li>
-					<li>   	
-						<button data-trans="he" class="btn-he" onclick="onSetLang('he')">He</button></li>
+					<li>
+						<button data-trans="he" class="btn-he" onclick="onSetLang('he')">He</button>
+					</li>
 				</ul>
 			</nav>
 			<div>
-				<a href="#"  onclick="onToggleHamburger()">
+				<a href="#" onclick="onToggleHamburger()">
 					<img class="btn-humburger" src="/img/hamburger.png" alt="Image Description"></a>
 			</div>
 		</div>
@@ -32,26 +34,25 @@
 
 	<section class="gallery">
 		<div class="search-area">
-		<form class=" form flex align-center  " onsubmit="onSearch(event)">
-	
-		<input class="browser-style" list="browsers" name="browser" id="browser">
-		<datalist id="browsers">
-		<option data-trans="all" value="All">
-		<option data-trans="presidents" value="Presidents">
-		<option data-trans="animals"  value="Animals">
-		<option data-trans="baby" value="Baby">
-		<option data-trans="celebs" value="Celebs">
-		<option data-trans="movies" value="Movies">
-		</datalist>
-		<button class="btn-search"><img  src="/img/search.png" alt="search button"></a>
-		</button>
-		</form>
+			<form class=" form flex align-center  " onsubmit="onSearch(event)">
+
+				<input class="browser-style" list="browsers" name="browser" id="browser">
+				<datalist id="browsers">
+					<option data-trans="all" value="All">
+					<option data-trans="presidents" value="Presidents">
+					<option data-trans="animals" value="Animals">
+					<option data-trans="baby" value="Baby">
+					<option data-trans="celebs" value="Celebs">
+					<option data-trans="movies" value="Movies">
+				</datalist>
+				<button class="btn-search"><img src="/img/search.png" alt="search button"></a>
+				</button>
+			</form>
 		</div>
-		
-		<div class="imgs-container scroll-container" flex>
-		</div>
+
+		<div class="imgs-container scroll-container" flex></div>
 	</section>
-	
+
 	<div class="main-editor">
 		<section class="editor">
 			<section class="canvas-container">
@@ -59,8 +60,8 @@
 			</section>
 			<div class="btn-editor-container">
 				<div>
-					<button  class="btn-meme-line"><input data-trans="meme-line-placeholder" class="meme-line" placeholder="Enter A Meme Line"
-							oninput="OnSetLineTxt(this.value)">
+					<button class="btn-meme-line"><input data-trans="meme-line-placeholder" class="meme-line"
+							placeholder="Enter A Meme Line" oninput="OnSetLineTxt(this.value)">
 					</button>
 				</div>
 				<div class="first-row-btn">
@@ -97,7 +98,8 @@
 					</div>
 				</div>
 
-				<button data-trans="share" class="btn-share" onclick="onShareFb()"><i class="fa-solid fa-share-nodes"></i>  Share</button>
+				<button data-trans="share" class="btn-share" onclick="onShareFb()"><i
+						class="fa-solid fa-share-nodes"></i> Share</button>
 				<button data-trans="download-trans" class="btn-download">
 					<a href="#" class="download" onclick="onDownload(this)" download="file-name">
 						<i class="fa-solid fa-download"></i> Download</a>
