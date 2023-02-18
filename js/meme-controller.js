@@ -37,12 +37,12 @@ function resizeCanvas() {
      //      window.clearTimeout(debounceTimer);
      // }
      // debounceTimer = window.setTimeout(() => {
-          // schedule the resize operation for the next animation frame
-          // window.requestAnimationFrame(() => {
-          //      gElCanvas.width = window.innerWidth;
-          //      gElCanvas.height = window.innerHeight;
-               // redraw the canvas content as needed
-               // ...
+     // schedule the resize operation for the next animation frame
+     // window.requestAnimationFrame(() => {
+     //      gElCanvas.width = window.innerWidth;
+     //      gElCanvas.height = window.innerHeight;
+     // redraw the canvas content as needed
+     // ...
      //      });
      // }, 1000);
 }
@@ -272,6 +272,29 @@ function doUploadImg(imgDataUrl, onSuccess) {
 function onToggleHamburger() {
      document.body.classList.toggle('menu-open')
      // document.querySelector('.main-screen').classList.toggle('menu-open')
+}
+
+function onSetLang(lang) {
+    
+     console.log(lang);
+     setLang(lang)
+
+     if(gCurrLang === 'he') {
+           document.body.classList.add('rtl')
+           document.querySelector('.btn-en').style.marginInlineStart='7px';
+          document.querySelector('.btn-he').style.marginInlineStart='7px';
+          document.querySelector('.impact').style.textAlign='right';
+          document.querySelector('.scroll-container').style.direction='ltr';
+          }
+
+     else {
+          document.body.classList.remove('rtl')
+          document.querySelector('.btn-en').style.marginInlineStart='20px';
+          document.querySelector('.btn-he').style.marginInlineStart='20px';
+          document.querySelector('.impact').style.textAlign='left';
+     }
+
+     doTrans()
 }
 
 

@@ -1,14 +1,68 @@
 'use strict'
-const USDTOILS_CONV = 3.53
+
+let gCurrLang = 'en'
+
 
 var gTrans = {
-    'a': {
-        en: 'a',
-        he: 'א'
+    logo: {
+        en: 'Logo',
+        he: 'לוגו'
     },
+    gallery: {
+        en: 'Gallery',
+        he: 'גלריה'
+    },
+    about: {
+        en: 'About',
+        he: 'אודות'
+    },
+
+    en: {
+        en: 'En',
+        he: 'אנגלית'
+    },
+
+    he: {
+        en: 'He',
+        he: 'עברית'
+    },
+    download: {
+        en:  'Download',
+        he: 'הורד'
+    },
+    share: {
+        en: 'Share',
+        he: 'שתף'
+    },
+
+    'meme-line-placeholder': {
+        en: 'ENTER A MEME LIVE ',
+        he: 'הכנס שורת מם'
+    },
+
+    impact: {
+        en: 'Impact ',
+        he: 'אימפקט'
+    },
+
+   arial: {
+        en: 'Arial ',
+        he: 'אריאל'
+    },
+
+    david: {
+        en: 'David ',
+        he: 'דוד שורת מם'
+    },
+    
+  
+
 }
 
-var gCurrLang = 'en'
+function setLang(lang) {
+    gCurrLang = lang
+}
+
 
 function getTrans(transKey) {
     // if key is unknown return 'UNKNOWN'
@@ -22,72 +76,22 @@ function getTrans(transKey) {
 }
 
 function doTrans() {
+    console.log('h');
     var els = document.querySelectorAll('[data-trans]')
+    console.log(els);
     els.forEach(el => {
+
+        console.log(el.dataset);
+        console.log(el.dataset.trans);
+
         const transKey = el.dataset.trans
         const translation = getTrans(transKey)
-        const prop = el.placeholder ? 'placeholder' : 'innerText'
-        el[prop] = translation
+        if (el.placeholder) el.placeholder = translation
+         else el.innerText = translation
+
+       
     })
 }
 
-function setLang(lang) {
-    gCurrLang = lang
-}
 
-function formatCurrency(num) {
-    if (gCurrLang === 'he') {
-        num *= USDTOILS_CONV
-        return new Intl.NumberFormat('he-IL', { style: 'currency', currency: 'ILS' }).format(num)
-    }
-    return `${num}$`
-}
 
-function formatNumSimple(num) {
-    return num.toLocaleString('es')
-}
-
-function formatNum(num) {
-    return new Intl.NumberFormat(gCurrLang).format(num)
-}
-
-function formatCurrency(num) {
-    return new Intl.NumberFormat('he-IL', { style: 'currency', currency: 'ILS' }).format(num)
-}
-
-function formatDate(time) {
-
-    const options = {
-        year: 'numeric', month: 'short', day: 'numeric',
-        hour: 'numeric', minute: 'numeric',
-        hour12: true,
-    }
-
-    return new Intl.DateTimeFormat(gCurrLang, options).format(time)
-}
-
-// Kilometers to Miles
-function kmToMiles(km) {
-    return km / 1.609
-}
-
-// Kilograms to Pounds:
-function kgToLbs(kg) {
-    return kg * 2.20462262185
-}
-
-function getPastRelativeFrom(ts) {
-    const diff = Date.now() - new Date(ts)
-    const seconds = diff / 1000
-    const minutes = seconds / 60
-    const hours = minutes / 60
-    const days = hours / 24
-
-    const formatter = new Intl.RelativeTimeFormat('en-US', {
-        numeric: 'auto'
-    })
-    if (seconds <= 60) return formatter.format(-seconds, 'seconds')
-    if (minutes <= 60) return formatter.format(-minutes, 'minutes')
-    if (hours <= 24) return formatter.format(-hours, 'hours')
-    return formatter.format(-days, 'days')
-}

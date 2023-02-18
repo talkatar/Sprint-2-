@@ -31,12 +31,12 @@
 	.main-header .main-nav {
 		/* display: none; */
 		position: fixed;
-		top: 0;
+		top: -300PX;
 		right: 0;
-		height: 100px;
+		height: 140px;
 		background-image: linear-gradient(-86deg, rgba(51, 190, 109, 0.7) 0%, rgba(12, 152, 185, 0.7) 100%);
 		min-width: 100px;
-		transform: translateX(100%);
+		transform: translateY(100%);
 		color: #000000;
 	}
 	.main-nav {
@@ -46,13 +46,31 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		top: 179px;
-		left: 10%;
-		right: 2%;
-		transform: translateX(0);
+		top: 160px;
+		left: 69%;
+		right: 7%;
+		transform: translateY(0);
+	}
+	body.rtl.menu-open .main-nav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 160px;
+		left: 7%;
+		right: 64%;
+		transform: translateY(0);
 	}
 	.main-header .main-menu {
 		flex-direction: column;
+	}
+	canvas {
+		width: 300px;
+		height: 300px;
+		margin-inline-end: 0px;
+		margin-inline-start: 27px;
+	}
+	.canvas-container {
+		background-size: 300px 300px;
 	}
 	.btn-about {
 		padding-inline-start: 7px;
@@ -62,109 +80,82 @@
 		width: 300px;
 		height: 300px;
 		margin-inline-start: 36px;
+		margin-inline-end: 22px;
 	}
 	.btn-editor {
 		width: 25px;
 		height: 25px;
 		margin: 2px 2px 2px 2px;
 	}
-
-
-
-	canvas {
-		width:300px ;
-		height: 300px;
-		margin-inline-end:0px ;
+	.btn-he {
+		margin-block-start: 6px;
+		margin-inline-start: 20px;
 	}
-	
-
-	.canvas-container{
-		
-		background-size: 300px 300px;
-		
-	
+	.btn-en {
+		margin-inline-start: 20px;
+	}
+	.first-row-btn {
+		text-align: center;
+		margin-block-end: 10px;
+	}
+	.meme-line {
+		/* Style for "can’t get" */
+		width: 200px;
+		height: 22px;
+		font-size: 15px;
+	}
+	.btn-meme-line {
+		/* Style for "Rectangle" */
+		width: 250px;
+		height: 30px;
+		margin: 10px 10px 10px 25px;
+		margin-block-start: 15px;
+	}
+	.main-buttons {
+		width: 220px;
+		height: 100px;
+		border-radius: 15px;
+		background-color: var(--clr11);
+		text-align: center;
+		margin-inline-start: 40px;
+	}
+	.btn-impact {
+		cursor: auto;
+		/* Style for "Rectangle" */
+		width: 200px;
+		height: 25px;
+		margin: 10px 10px 2px 10px;
+	}
+	.impact {
+		/* Style for "impact" */
+		cursor: pointer;
+		width: 130px;
+		height: 20px;
+		font-size: 10px;
+	}
+	.btn-download {
+		/* Style for "Rectangle" */
+		margin-block-start: 15px;
+		width: 120px;
+		height: 20px;
+		font-size: 10px;
+	}
+	.download {
+		font-size: 10px;
+	}
+	.btn-share {
+		/* Style for "Rectangle" */
+		margin-inline-start: 10px;
+		margin-inline-end: 15px;
+		margin-block-start: 15px;
+		width: 120px;
+		height: 20px;
+		font-size: 10px;
+	}
+	.canvas-container {
+		background-image: url('/img/Forme_1.png');
+	}
 }
-.first-row-btn {
-    text-align: center;
-    margin-block-end: 10px;
-}
-
-.meme-line  {
-    /* Style for "can’t get" */
-    width: 200px;
-    height: 22px;
-    font-size: 15px;
-    
-}
-
-.btn-meme-line {
-    /* Style for "Rectangle" */
-    width: 250px;
-    height: 30px;
-	margin: 10px 10px 10px 25px;
-    margin-block-start: 15px;   
-}
-
-.main-buttons {
-    width: 220px;
-    height: 100px;
-    border-radius: 15px;
-    background-color: var(--clr11);
-    text-align: center;
-    margin-inline-start: 40px;
-}
-
-.btn-impact {
-    cursor: auto;
-    /* Style for "Rectangle" */
-    width: 200px;
-    height: 25px;
-    margin: 10px 10px 2px 10px;
-}
-
-.impact {
-    /* Style for "impact" */
-    cursor: pointer;
-    width: 130px;
-    height: 20px;
-    font-size: 10px;
-    
-}
-
-
-.btn-download {
-    /* Style for "Rectangle" */
-    margin-block-start: 15px;
-    width: 120px;
-    height: 20px;
-}
-
-.download {
-    /* Style for "Download" */
-    font-size: 10px;
-}
-
-.btn-share {
-    /* Style for "Rectangle" */
-    margin-inline-start: 10px;
-    margin-inline-end: 15px;
-    margin-block-start: 15px;
-    width: 120px;
-    height: 20px;
-    font-size: 10px;
-    
-}
-.canvas-container{
-
-    background-image: url('/img/Forme_1.png');
-
-  }
-
-}
-
-
-
-
 
 
 /* MEDIUM */
@@ -172,16 +163,7 @@
 
 /* 740px */
 
-@media (min-width: 740px) {
-
-
-
-
-
-
-
-
-}
+@media (min-width: 740px) {}
 
 
 /* LARGE */
@@ -189,5 +171,4 @@
 
 /* 1270px */
 
-@media (min-width: 1270px) {
-}
+@media (min-width: 1270px) {}

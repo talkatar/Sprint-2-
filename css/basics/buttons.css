@@ -29,7 +29,7 @@ button {
     font-weight: 500;
     text-align: left;
     /* padding-inline-end: 250px; */
-    padding-inline-start: 40px;
+    padding-inline-start: 20px;
 }
 
 .button {
@@ -150,6 +150,10 @@ input::placeholder {
     box-shadow: 1px 6px 0 #632687, inset 0 5px 0 #bf84da;
     border-radius: 15px;
     background-color: #8f44bb;
+    color: #ffffff;
+    font-family: Poppins;
+    font-size: 21px;
+    font-weight: 500;
 }
 
 .download {
@@ -168,9 +172,6 @@ input::placeholder {
     margin-inline-start: 40px;
     margin-inline-end: 15px;
     margin-block-start: 15px;
-
-
-
     width: 213px;
     height: 51px;
     box-shadow: 1px 6px 0 #165c9c, inset 0 5px 0 #57b2e8;
@@ -187,3 +188,34 @@ input::placeholder {
     display: none;
     margin-inline-end:100px ;
 }
+
+.btn-en{
+    width: 45px;
+    box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    background-color: var(--clr1);
+    text-decoration: none;
+    color: var(--clr10);
+    font-family: Poppins;
+    font-size: 15px;
+    border-style: none;
+    margin-inline-start: 15px;
+    margin-inline-end: 10px;
+    margin-block-start: 3px;
+
+
+}
+.btn-he{
+   
+    width: 45px;
+    box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    background-color: var(--clr1);
+    text-decoration: none;
+    color: var(--clr10);
+    font-family: Poppins;
+    font-size: 15px;
+    border-style: none;
+    margin-block-start: 3px;
+}
+

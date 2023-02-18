@@ -14,20 +14,25 @@
 
 	<header class="main-header grid">
 		<div class="main-continer flex space-between align-center">
-			<div class="logo">Logo</div>
+			<div data-trans="logo" class="logo">Logo</div>
 			<nav class="main-nav  ">
 				<ul class="main-menu flex clean-list  space-between">
-					<li><a href="#" class="btn-gallery" onclick="onToggleGallery()">Gallery</a></li>
-					<li><a href="#" class="btn-about">About</a></li>
-
+					<li><a href="#" data-trans="gallery" class="btn-gallery" onclick="onToggleGallery()">Gallery</a></li>
+					<li><a href="#" data-trans="about" class="btn-about">About</a></li>
+					<li><button data-trans="en" class="btn-en" onclick="onSetLang('en')">En</button></li>
+					<li>   	
+						<button data-trans="he" class="btn-he" onclick="onSetLang('he')">He</button></li>
 				</ul>
 			</nav>
-			<a href="#"  onclick="onToggleHamburger()">
-				<img class="btn-humburger" src="/img/hamburger.png" alt="Image Description"></a>
+			<div>
+
+				<a href="#"  onclick="onToggleHamburger()">
+					<img class="btn-humburger" src="/img/hamburger.png" alt="Image Description"></a>
+
+			</div>
 		</div>
+		
 	</header>
-
-
 
 
 
@@ -46,7 +51,7 @@
 
 			<div class="btn-editor-container">
 				<div>
-					<button class="btn-meme-line"><input class="meme-line" placeholder="Enter A Meme Line"
+					<button  class="btn-meme-line"><input data-trans="meme-line-placeholder" class="meme-line" placeholder="Enter A Meme Line"
 							oninput="OnSetLineTxt(this.value)">
 					</button>
 				</div>
@@ -75,9 +80,9 @@
 					<div>
 						<button class="btn-impact">
 							<select class="impact" onchange="onSetFont(this.value)">
-								<option value="Impact">Impact</option>
-								<option value="Arial">Arial</option>
-								<option value="David">David</option>
+								<option data-trans="impact" value="Impact">Impact</option>
+								<option data-trans="arial" value="Arial">Arial</option>
+								<option data-trans="david" value="David">David</option>
 							</select>
 						</button>
 						<button class="btn-editor " onclick="onIncreaseFont()"><i class="fa-solid fa-plus"></i></button>
@@ -88,9 +93,10 @@
 					</div>
 				</div>
 
-				<button class="btn-share" onclick="onShareFb()"> Share</button>
-				<button class="btn-download">
-					<a href="#" class="download" onclick="onDownload(this)" download="file-name">Download</a>
+				<button data-trans="share" class="btn-share" onclick="onShareFb()"><i class="fa-solid fa-share-nodes"></i>  Share</button>
+				<button data-trans="download" class="btn-download">
+					<a href="#" class="download" onclick="onDownload(this)" download="file-name">
+						<i class="fa-solid fa-download"></i> Download</a>
 				</button>
 
 

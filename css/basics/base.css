@@ -12,3 +12,7 @@ body {
 
 }
 
+body.rtl {
+    direction: rtl;
+}
+
