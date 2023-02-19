@@ -51,7 +51,7 @@ var gTrans = {
 
     david: {
         en: 'David ',
-        he: 'דוד שורת מם'
+        he: 'דוד '
     },
 
     all: {

@@ -5,3 +5,7 @@
     background-image: var(--clr13);
     margin:15px 15px 15px 15px ;
 }
+
+.main-nav{
+    z-index: 3;
+}

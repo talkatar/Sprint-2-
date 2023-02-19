@@ -15,7 +15,7 @@
 
 	<header class="main-header grid">
 		<div class="main-continer flex space-between align-center">
-			<div data-trans="logo" class="logo">Logo</div>
+			<div data-trans="logo" class="logo">Meme Generator</div>
 			<nav class="main-nav  ">
 				<ul class="main-menu flex clean-list  space-between">
 					<li><a href="#" data-trans="gallery" class="btn-gallery" onclick="onToggleGallery()">Gallery</a>
@@ -61,11 +61,10 @@
 				<canvas id="my-canvas" height="546" width="525"> </canvas>
 			</section>
 			<div class="btn-editor-container">
-				<div>
-					<button class="btn-meme-line"><input data-trans="meme-line-placeholder" class="meme-line"
+				
+					<input data-trans="meme-line-placeholder" class="meme-line"
 							placeholder="Enter A Meme Line" oninput="OnSetLineTxt(this.value)">
-					</button>
-				</div>
+				
 				<div class="first-row-btn">
 					<button class="btn-editor switch " onclick="onSwitchLine()"><i
 							class="fa-sharp fa-solid fa-arrows-up-down"></i></i></button>
@@ -87,13 +86,13 @@
 							oninput="onSetColor(this.value)" />
 
 					<div>
-						<button class="btn-impact">
+						
 							<select class="impact" onchange="onSetFont(this.value)">
 								<option data-trans="impact" value="Impact">Impact</option>
 								<option data-trans="arial" value="Arial">Arial</option>
 								<option data-trans="david" value="David">David</option>
 							</select>
-						</button>
+						
 						<button class="btn-editor " onclick="onIncreaseFont()"><i class="fa-solid fa-plus"></i></button>
 						<button class="btn-editor " onclick="onDecreaseFont()"><i
 								class="fa-solid fa-minus"></i></button>

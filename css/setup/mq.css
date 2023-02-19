@@ -1,6 +1,16 @@
 /* MOBILE ONLY */
 
 @media (max-width: 1000px) {
+.gallery{
+	height: 85vh;
+ 
+}
+	.img {
+		
+		 max-height:330px; 
+		 max-width: 330px;  
+	}
+	
 	.main-header {
 		border-radius: 0px;
 		height: 145px;

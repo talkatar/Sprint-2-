@@ -49,12 +49,14 @@ button {
     background-color: var(--clr11);
     text-align: center;
     margin-inline-start: 40px;
+    margin-block-start: 25px;
+
 }
 
 .meme-line {
     /* Style for "can’t get" */
-    width: 399px;
-    height: 22px;
+    width: 445px;
+    height: 57px;
     color: #3d3d3d;
     font-family: Poppins;
     font-size: 25px;
@@ -63,12 +65,7 @@ button {
     text-transform: uppercase;
     
     /* Text style for "can’t get" */
-}
 
-.btn-meme-line {
-    /* Style for "Rectangle" */
-    width: 445px;
-    height: 57px;
     box-shadow: 1px 5px 0 #bbc4d1, inset 0 5px 0 #bbc4d1;
     border-radius: 28px;
     background-color: #ebeef3;
@@ -77,6 +74,8 @@ button {
     border-style: none;
 
 }
+
+
 
 input::placeholder {
     text-align: center;
@@ -113,31 +112,30 @@ input::placeholder {
     background-image: linear-gradient(-38deg, #42eb5c 0%, #37b34a 100%);
 }
 
-.btn-impact {
-    cursor: auto;
+
+.impact {
+
     /* Style for "Rectangle" */
     width: 236px;
     height: 45px;
     box-shadow: 1px 5px 0 rgba(92, 92, 92, 0.55), inset 0 5px 0 rgba(255, 255, 255, 0.58);
     border-radius: 10px;
     background-color: #ffffff;
+    margin-block-start: 10px;
     margin: 10px 10px 10px 10px;
     border-style: none;
-}
-
-.impact {
-    /* Style for "impact" */
-    cursor: pointer;
-    /* width: 130px;
-    height: 30px; */
-    color: #22252c;
-    font-family: Poppins-Semi-bold;
-    font-size: 25px;
-    font-weight: 400;
-    text-align: left;
-    text-transform: uppercase;
-    margin-block-start: -50px;
-    
+   
+     /* Style for "impact" */
+     cursor: pointer;
+     /* width: 130px;
+     height: 30px; */
+     color: #22252c;
+     font-family: Poppins-Semi-bold;
+     font-size: 17px;
+     font-weight: 400;
+     text-align: center;
+     text-transform: uppercase;
+     margin-block-start: -50px;
 }
 
 .color {
@@ -249,5 +247,11 @@ input::placeholder {
 .color-input{
     opacity: 0;
     position: absolute;
-    bottom: 0;
+    bottom: 90px;
+    left: 320px;
+}
+
+input[name='color-picker']{
+    text-align: left;
+
 }
