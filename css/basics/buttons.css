@@ -223,6 +223,8 @@ input::placeholder {
 }
 
 .btn-search {
+    position: absolute;
+    left:440px;
     /* Style for "Forme 9" */
     width: 30px;
     height: 30px;
@@ -234,6 +236,7 @@ input::placeholder {
 
 .browser-style {
     /* Style for "Search" */
+    position: relative;
     width: 71px;
     height: 17px;
     opacity: 0.38;
@@ -251,7 +254,10 @@ input::placeholder {
     left: 320px;
 }
 
-input[name='color-picker']{
+
+
+input.browser-style::placeholder{
     text-align: left;
+    margin-inline-start: 50px;
 
 }

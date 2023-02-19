@@ -166,9 +166,12 @@ function onSwitchLine() {
 function onDownload(elLink) {
      console.log(elLink);
      isDownload = 'true'
-     renderMeme()
-     //  setTimeout(download,500,elLink)
+     // renderMeme()
+     //  setTimeout(()=>download(elLink),0)
+     // setTimeout(()=>{
+     // })
      const data = gElCanvas.toDataURL()
+     console.log('data', data);
      elLink.href = data
      elLink.download = 'my-mime'
 }

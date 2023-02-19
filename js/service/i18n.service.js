@@ -4,8 +4,8 @@ let gCurrLang = 'en'
 
 var gTrans = {
     logo: {
-        en: 'Logo',
-        he: 'לוגו'
+        en: 'Meme Generator',
+        he: 'מחולל מים'
     },
     gallery: {
         en: 'Gallery',
