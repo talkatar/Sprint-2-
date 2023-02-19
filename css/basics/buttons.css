@@ -263,6 +263,10 @@ input.browser-style::placeholder{
 
 }
 
+.impact::placeholder{
+    text-align: center;
+}
+
 
 
   
