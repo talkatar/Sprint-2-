@@ -7,8 +7,8 @@
 }
 	.img {
 		
-		 max-height:330px; 
-		 max-width: 330px;  
+		 max-height:260px; 
+		 max-width: 260px;  
 	}
 	
 	.main-header {
@@ -17,13 +17,9 @@
 	}
 	.imgs-container {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+		grid-template-columns: repeat(auto-fill, minmax(260px, 260px));
 	}
-	.img {
-		height: 300px;
-		width: 300px;
-		padding: 10px 15px 10px 15px;
-	}
+
 	.scroll-container {
 		height: 600px;
 	}
