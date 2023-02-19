@@ -242,7 +242,7 @@ input::placeholder {
     opacity: 0.38;
     color: #fefefe;
     font-family: Poppins;
-    font-size: 21px;
+    font-size: 25px;
     font-weight: 300;
     text-align: left;
 }
@@ -258,6 +258,11 @@ input::placeholder {
 
 input.browser-style::placeholder{
     text-align: left;
+    margin-left: 50px;
     margin-inline-start: 50px;
 
 }
+
+
+
+  

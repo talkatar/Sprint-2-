@@ -235,11 +235,12 @@ function onSetLang(lang) {
 
      if(gCurrLang === 'he') {
            document.body.classList.add('rtl')
-           document.querySelector('.btn-en').style.marginInlineStart='7px';
-          document.querySelector('.btn-he').style.marginInlineStart='7px';
-          document.querySelector('.impact').style.textAlign='right';
-          document.querySelector('.scroll-container').style.direction='ltr';
-          }
+           document.querySelector('.btn-en').style.marginInlineStart='7px'
+          document.querySelector('.btn-he').style.marginInlineStart='7px'
+          document.querySelector('.impact').style.textAlign='right'
+          document.querySelector('.scroll-container').style.direction='ltr'
+          document.querySelector('.btn-search').style.right='450px' 
+     }
 
      else {
           document.body.classList.remove('rtl')

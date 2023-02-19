@@ -83,6 +83,10 @@ var gTrans = {
         en: 'Movies ',
         he: ' סרטים'
     },
+    'browser-placeholder': {
+        en: 'Search ',
+        he: 'חפש'
+    },
 
 }
 
