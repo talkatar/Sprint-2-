@@ -42,7 +42,8 @@ button {
 }
 
 .main-buttons {
-    width: 445px;
+    position: relative;
+    width: 450px;
     height: 150px;
     border-radius: 15px;
     background-color: var(--clr11);
@@ -127,8 +128,8 @@ input::placeholder {
 .impact {
     /* Style for "impact" */
     cursor: pointer;
-    width: 130px;
-    height: 30px;
+    /* width: 130px;
+    height: 30px; */
     color: #22252c;
     font-family: Poppins-Semi-bold;
     font-size: 25px;
@@ -243,4 +244,10 @@ input::placeholder {
     font-size: 21px;
     font-weight: 300;
     text-align: left;
+}
+
+.color-input{
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
 }

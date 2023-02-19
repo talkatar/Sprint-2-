@@ -4,7 +4,10 @@ function renderGallery() {
     let imgs= getFilterdImg ()
     if(!imgs.length) imgs = getImgs()
     const strHTMLs = imgs.map(img => {
-    return `<img class="img" src="img/${img.id}.jpg" onclick = "onImgSelect('${img.id}')"/>`})
+    return `
+            <img class="img" src="img/${img.id}.jpg" onclick = "onImgSelect('${img.id}')"/>
+            
+            `})
     document.querySelector('.imgs-container').innerHTML = strHTMLs.join('')
 }
 

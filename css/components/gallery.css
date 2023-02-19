@@ -8,11 +8,15 @@
     /* padding-right: 60px; */
     /* padding-left: 50px; */
     padding-top: 25px;
+    height: 90vh;
+ 
+    
 }
 
 .imgs-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 200px));
+    grid-template-columns: repeat(auto-fill, minmax(200px,200px));
+   
 }
 
 .scroll-container {
@@ -20,7 +24,7 @@
     margin-inline-end: 15px;
     overflow-y: scroll;
     overflow: auto;
-    height: 400px;
+    height: 80vh;
 }
 
 .scroll-container::-webkit-scrollbar {
@@ -46,8 +50,9 @@
     border-radius: 39px;
     cursor: pointer;
     padding: 12.5px 15px 12.5px 15px;
-    height: 200px;
-    width: 200px;
+    object-fit: cover;
+     max-height:200px; 
+     max-width: 200px;  
     margin-block-end: 50px;
 }
 
@@ -66,3 +71,8 @@
     border-color: none;
     border-style: none;
 }
+
+/* .img-pallete{
+height: 90%;
+width: 90%;
+} */

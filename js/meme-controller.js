@@ -85,6 +85,14 @@ function OnSetLineTxt(memeLine) {
      renderMeme()
 }
 
+
+function onColor(){
+     const colorPicker=document.querySelector('input[name="color-picker"')
+     colorPicker.focus()
+     colorPicker.value='#000000'
+     colorPicker.click()
+
+}
 function onSetColor(color) {
      setColor(color)
      renderMeme()

@@ -1,6 +1,6 @@
 /* MOBILE ONLY */
 
-@media (max-width: 780px) {
+@media (max-width: 1000px) {
 	.main-header {
 		border-radius: 0px;
 		height: 145px;
@@ -161,9 +161,9 @@
 /* MEDIUM */
 
 
-/* 740px */
+/* 780px */
 
-@media (min-width: 740px) {}
+@media (min-width: 780px) {}
 
 
 /* LARGE */
